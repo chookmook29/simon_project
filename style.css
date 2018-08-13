@@ -1,0 +1,43 @@
+body {
+    background-color: #c7eaa4;
+}
+main {
+	background-color: black;
+	width: 50%px;
+	height: 50%px;
+	margin: auto;
+}
+.start {
+    background-color: red;
+    height: 20px;
+    border-radius: 20px;
+    
+}
+    
+.strict {
+    background-color: green;
+    height: 20px;
+	width: 20px;
+    border-radius: 20px;
+}
+.reset {
+    background-color: orange;
+    height: 20px;
+    border-radius: 20px;
+}
+.spacer {
+    height: 8rem;
+}
+.console {
+	background-color: black;
+}
+.console2 {
+	background-color: black;
+	font-style: italic;
+
+}
+.console3 {
+	background-color: black;
+	color: green;
+}
+section  {color: white;}
