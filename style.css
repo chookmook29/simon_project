@@ -55,7 +55,7 @@ h1 {
 .console4 {
 	z-index: -1;
 	background-color: #444444;
-	height: 20px;
+	height: 30px;
 }
 section  {
 	color: white;
@@ -67,7 +67,7 @@ section  {
 	height: 30px;
 	border-radius: 20px;
 	background-color: gray;
-	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
+	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707;
 }
 .blue {
 	position: relative;
@@ -76,7 +76,7 @@ section  {
 	height: 30px;
 	border-radius: 20px;
 	background-color: gray;
-	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
+	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707;
 }
 .green {
 	position: relative;
@@ -85,7 +85,7 @@ section  {
 	height: 30px;
 	border-radius: 20px;
 	background-color: gray;
-	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
+	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707;
 }
 .orange {
 	position: relative;
@@ -94,5 +94,33 @@ section  {
 	height: 30px;
 	border-radius: 20px;
 	background-color: gray;
-	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
+	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #020202;
 }
+.button-red {
+	position: relative;
+	left: 28%;
+	width: 40px;
+	height: 60px;
+	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 7px 0 0 #3F3F3F, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
+}
+.button-blue {
+	position: relative;
+	left: 28%;
+	width: 40px;
+	height: 60px;
+	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 7px 0 0 #3F3F3F, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
+}
+.button-green {
+	position: relative;
+	left: 28%;
+	width: 40px;
+	height: 60px;
+	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 7px 0 0 #3F3F3F, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
+}.button-orange {
+	position: relative;
+	left: 28%;
+	width: 40px;
+	height: 60px;
+	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 7px 0 0 #3F3F3F, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
+}
+	
