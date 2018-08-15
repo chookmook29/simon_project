@@ -14,9 +14,15 @@ main {
 .start {
     background-color: red;
     height: 20px;
-	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 8px 0 0 #E22900, 0 8px 0 1px #000000, 0 8px 8px 1px #000000;
+	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 8px 0 0 #BC2200, 0 8px 0 1px #000000, 0 8px 8px 1px #000000;
     
 }
+.start:active {
+	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 0 0 1px #000000;
+	transform: translateY(10px);
+	-webkit-transform: translateY(10px);
+}
+    
 h1 {
 	font-size: 4rem;
 	background-color: black;
@@ -26,12 +32,22 @@ h1 {
     background-color: red;
     height: 20px;
 	text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
-	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 8px 0 0 #E22900, 0 8px 0 1px #000000, 0 8px 8px 1px #000000;
+	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 8px 0 0 #BC2200, 0 8px 0 1px #000000, 0 8px 8px 1px #000000;
+}
+.strict:active {
+	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 0 0 1px #000000;
+	transform: translateY(10px);
+	-webkit-transform: translateY(10px);
 }
 .reset {
     background-color: red;
     height: 20px;
-	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 8px 0 0 #E22900, 0 8px 0 1px #000000, 0 8px 8px 1px #000000;
+	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 8px 0 0 #BC2200, 0 8px 0 1px #000000, 0 8px 8px 1px #000000;
+}
+.reset:active {
+	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 0 0 1px #000000;
+	transform: translateY(10px);
+	-webkit-transform: translateY(10px);
 }
 .spacer {
     height: 8rem;
@@ -49,7 +65,7 @@ h1 {
 .console3 {
 	padding-top: 30px;
 	background-color: #444444;
-	color: green;
+	color: #00FE00;
 	font-family: 'PIXEL';
 }
 .console4 {
@@ -103,6 +119,12 @@ section  {
 	height: 60px;
 	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 7px 0 0 #3F3F3F, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
 }
+.button-red:active {
+	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 0 0 1px #020202;
+	transform: translateY(10px); 
+	-webkit-transform: translateY(10px);  
+}
+	
 .button-blue {
 	position: relative;
 	left: 28%;
@@ -110,17 +132,40 @@ section  {
 	height: 60px;
 	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 7px 0 0 #3F3F3F, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
 }
+.button-blue:active {
+	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 0 0 1px #020202;
+	transform: translateY(10px); 
+	-webkit-transform: translateY(10px);  
+}
 .button-green {
 	position: relative;
 	left: 28%;
 	width: 40px;
 	height: 60px;
 	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 7px 0 0 #3F3F3F, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
-}.button-orange {
+}
+.button-green:active {
+	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 0 0 1px #020202;
+	transform: translateY(10px); 
+	-webkit-transform: translateY(10px);  
+}
+.button-orange {
 	position: relative;
 	left: 28%;
 	width: 40px;
 	height: 60px;
 	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 7px 0 0 #3F3F3F, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
+}
+.button-orange:active {
+	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 0 0 1px #020202;
+	transform: translateY(10px); 
+	-webkit-transform: translateY(10px);  
+}
+main {
+	box-shadow: 0px 9px 2px 9px #020202;
+	max-width: 50%;
+}
+.name {
+	font-size: 30px;
 }
 	
