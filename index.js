@@ -69,3 +69,35 @@ function array_add(){
 	break;
 	}  
 }
+function push_red(){
+	current_button = "red";
+	if (current_button == game_array[0]){
+		red = document.getElementById("red");
+		red.style.backgroundColor="gray";
+		game_array = [];
+}
+}
+function push_blue(){
+	current_button = "blue";
+	if (current_button == game_array[0]){
+		blue = document.getElementById("blue");
+		blue.style.backgroundColor="gray";
+		game_array = [];
+}
+}
+function push_green(){
+	current_button = "green";
+	if (current_button == game_array[0]){
+		green = document.getElementById("green");
+		green.style.backgroundColor="gray";
+		game_array = [];
+}
+}
+function push_orange(){
+	current_button = "orange";
+	if (current_button == game_array[0]){
+		orange = document.getElementById("orange");
+		orange.style.backgroundColor="gray";
+		game_array = [];
+}
+}
