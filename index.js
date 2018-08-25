@@ -49,15 +49,23 @@ function array_add(){
 	switch(result){
 	case 1:
     game_array.push("red");
+	red = document.getElementById("red");
+	red.style.backgroundColor="red";
 	break;
 	case 2:
-    game_array.push("green");
+    game_array.push("blue");
+	blue = document.getElementById("blue");
+	blue.style.backgroundColor="blue";
 	break;
 	case 3:
-    game_array.push("blue");
+    game_array.push("green");
+	green = document.getElementById("green");
+	green.style.backgroundColor="green";
 	break;
 	case 4:
     game_array.push("orange");
+	orange = document.getElementById("orange");
+	orange.style.backgroundColor="orange";
 	break;
-	}      
+	}  
 }
