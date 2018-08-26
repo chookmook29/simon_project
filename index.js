@@ -51,53 +51,68 @@ function array_add(){
     game_array.push("red");
 	red = document.getElementById("red");
 	red.style.backgroundColor="red";
+	setTimeout(default_colour, 500)
 	break;
 	case 2:
     game_array.push("blue");
 	blue = document.getElementById("blue");
 	blue.style.backgroundColor="blue";
+	setTimeout(default_colour, 500)
 	break;
 	case 3:
     game_array.push("green");
 	green = document.getElementById("green");
 	green.style.backgroundColor="green";
+	setTimeout(default_colour, 500)
 	break;
 	case 4:
     game_array.push("orange");
 	orange = document.getElementById("orange");
 	orange.style.backgroundColor="orange";
+	setTimeout(default_colour, 500)
 	break;
 	}  
 }
 function push_red(){
 	current_button = "red";
 	if (current_button == game_array[0]){
-		red = document.getElementById("red");
-		red.style.backgroundColor="gray";
+		level = level + 1;
+		document.getElementById("screen").innerHTML = level;
 		game_array = [];
 }
 }
 function push_blue(){
 	current_button = "blue";
 	if (current_button == game_array[0]){
-		blue = document.getElementById("blue");
-		blue.style.backgroundColor="gray";
+		level = level + 1;
+		document.getElementById("screen").innerHTML =  level;
 		game_array = [];
 }
 }
 function push_green(){
 	current_button = "green";
 	if (current_button == game_array[0]){
-		green = document.getElementById("green");
-		green.style.backgroundColor="gray";
+		level = level + 1;
+		document.getElementById("screen").innerHTML =  level;
 		game_array = [];
 }
 }
 function push_orange(){
 	current_button = "orange";
 	if (current_button == game_array[0]){
-		orange = document.getElementById("orange");
-		orange.style.backgroundColor="gray";
+		level = level + 1;
+		document.getElementById("screen").innerHTML =  level;
 		game_array = [];
 }
 }
+function default_colour(){
+	red = document.getElementById("red");
+	red.style.backgroundColor="gray";
+	blue = document.getElementById("blue");
+	blue.style.backgroundColor="gray";
+	green = document.getElementById("green");
+	green.style.backgroundColor="gray";
+	orange = document.getElementById("orange");
+	orange.style.backgroundColor="gray";
+}
+	
