@@ -51,24 +51,28 @@ function array_add(){
     game_array.push("red");
 	red = document.getElementById("red");
 	red.style.backgroundColor="red";
+	red.style.boxShadow="0 0 0 1px red inset, 0 0 0 2px red inset, 0 7px 0 0 red, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 	setTimeout(default_colour, 500)
 	break;
 	case 2:
     game_array.push("blue");
 	blue = document.getElementById("blue");
 	blue.style.backgroundColor="blue";
+	blue.style.boxShadow="0 0 0 1px blue inset, 0 0 0 2px blue inset, 0 7px 0 0 blue, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 	setTimeout(default_colour, 500)
 	break;
 	case 3:
     game_array.push("green");
 	green = document.getElementById("green");
 	green.style.backgroundColor="green";
+	green.style.boxShadow="0 0 0 1px green inset, 0 0 0 2px green inset, 0 7px 0 0 green, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 	setTimeout(default_colour, 500)
 	break;
 	case 4:
     game_array.push("orange");
 	orange = document.getElementById("orange");
 	orange.style.backgroundColor="orange";
+	orange.style.boxShadow="0 0 0 1px orange inset, 0 0 0 2px orange inset, 0 7px 0 0 orange, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 	setTimeout(default_colour, 500)
 	break;
 	}  
@@ -108,11 +112,15 @@ function push_orange(){
 function default_colour(){
 	red = document.getElementById("red");
 	red.style.backgroundColor="gray";
+	red.style.boxShadow="0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 	blue = document.getElementById("blue");
 	blue.style.backgroundColor="gray";
+	blue.style.boxShadow="0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 	green = document.getElementById("green");
 	green.style.backgroundColor="gray";
+	green.style.boxShadow="0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 	orange = document.getElementById("orange");
 	orange.style.backgroundColor="gray";
+	orange.style.boxShadow="0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 }
 	
