@@ -42,6 +42,10 @@ function start_game(){
 		audio.src = "sounds/button_2.mp3";
 		audio.preload = 'auto';
 		audio.play();
+    level = 0;
+    document.getElementById("screen").innerHTML = level;
+    game_array = [];
+    player_array = [];
 		initialize_array();
 	}
 function initialize_array(){
@@ -75,7 +79,7 @@ function initialize_array(){
 	orange.style.boxShadow="0 0 0 1px orange inset, 0 0 0 2px orange inset, 0 7px 0 0 orange, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 	setTimeout(default_colour, 500)
 	break;
-	}  
+	}
 }
 function push_red(){
 	current_button = "red";
@@ -154,6 +158,5 @@ function add_array_element(){
 	orange.style.boxShadow="0 0 0 1px orange inset, 0 0 0 2px orange inset, 0 7px 0 0 orange, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 	setTimeout(default_colour, 500)
 	break;
-	}  
+	}
 }
-	
