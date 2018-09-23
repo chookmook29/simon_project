@@ -1,30 +1,6 @@
 var game_array = [];
 var player_array = [];
 var level = 0;
-function push_red(){
-       var audio = new Audio();
-	   audio.src = "sounds/button_1.mp3";
-	   audio.preload = 'auto';
-       audio.play();
-                 }
-function push_blue(){
-       var audio = new Audio();
-	   audio.src = "sounds/button_1.mp3";
-	   audio.preload = 'auto';
-       audio.play();
-                 }
-function push_green(){
-       var audio = new Audio();
-	   audio.src = "sounds/button_1.mp3";
-	   audio.preload = 'auto';
-       audio.play();
-                 }
-function push_orange(){
-       var audio = new Audio();
-	   audio.src = "sounds/button_1.mp3";
-	   audio.preload = 'auto';
-       audio.play();
-                 }
 function push_strict(){
        var audio = new Audio();
 	   audio.src = "sounds/button_2.mp3";
@@ -83,6 +59,10 @@ function initialize_array(){
 }
 function push_red(){
 	current_button = "red";
+  var audio = new Audio();
+  audio.src = "sounds/button_1.mp3";
+  audio.preload = 'auto';
+  audio.play();
 	if (current_button === game_array[level]){
 		level = level + 1;
 		document.getElementById("screen").innerHTML = level;
@@ -91,6 +71,10 @@ function push_red(){
 }
 function push_blue(){
 	current_button = "blue";
+  var audio = new Audio();
+  audio.src = "sounds/button_1.mp3";
+  audio.preload = 'auto';
+  audio.play();
 	if (current_button === game_array[level]){
 		level = level + 1;
 		document.getElementById("screen").innerHTML =  level;
@@ -99,6 +83,10 @@ function push_blue(){
 }
 function push_green(){
 	current_button = "green";
+  var audio = new Audio();
+  audio.src = "sounds/button_1.mp3";
+  audio.preload = 'auto';
+  audio.play();
 	if (current_button === game_array[level]){
 		level = level + 1;
 		document.getElementById("screen").innerHTML =  level;
@@ -107,6 +95,10 @@ function push_green(){
 }
 function push_orange(){
 	current_button = "orange";
+  var audio = new Audio();
+  audio.src = "sounds/button_1.mp3";
+  audio.preload = 'auto';
+  audio.play();
 	if (current_button === game_array[level]){
 		level = level + 1;
 		document.getElementById("screen").innerHTML =  level;
