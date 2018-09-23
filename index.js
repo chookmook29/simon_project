@@ -83,7 +83,7 @@ function initialize_array(){
 }
 function push_red(){
 	current_button = "red";
-	if (current_button == game_array[level]){
+	if (current_button === game_array[level]){
 		level = level + 1;
 		document.getElementById("screen").innerHTML = level;
 		add_array_element();
@@ -91,7 +91,7 @@ function push_red(){
 }
 function push_blue(){
 	current_button = "blue";
-	if (current_button == game_array[level]){
+	if (current_button === game_array[level]){
 		level = level + 1;
 		document.getElementById("screen").innerHTML =  level;
 		add_array_element();
@@ -99,7 +99,7 @@ function push_blue(){
 }
 function push_green(){
 	current_button = "green";
-	if (current_button == game_array[level]){
+	if (current_button === game_array[level]){
 		level = level + 1;
 		document.getElementById("screen").innerHTML =  level;
 		add_array_element();
@@ -107,7 +107,7 @@ function push_green(){
 }
 function push_orange(){
 	current_button = "orange";
-	if (current_button == game_array[level]){
+	if (current_button === game_array[level]){
 		level = level + 1;
 		document.getElementById("screen").innerHTML =  level;
 		add_array_element();
