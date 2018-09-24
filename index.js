@@ -1,19 +1,19 @@
 var game_array = [];
 var player_array = [];
 var level = 0;
-function push_strict(){
-       var audio = new Audio();
+function push_power(){
+      var audio = new Audio();
 	   audio.src = "sounds/button_2.mp3";
 	   audio.preload = 'auto';
-       audio.play();
+     audio.play();
                  }
-function push_reset(){
-       var audio = new Audio();
+function push_next(){
+     var audio = new Audio();
 	   audio.src = "sounds/button_2.mp3";
 	   audio.preload = 'auto';
-       audio.play();
+     audio.play();
                  }
-function start_game(){
+function push_start(){
 		audio = new Audio();
 		audio.src = "sounds/button_2.mp3";
 		audio.preload = 'auto';
