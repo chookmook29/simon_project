@@ -57,7 +57,7 @@ function initialize_array(){
 	break;
 	}
 }
-function push_red(){
+function push_first(){
 	current_button = "red";
   var audio = new Audio();
   audio.src = "sounds/button_1.mp3";
@@ -69,7 +69,7 @@ function push_red(){
 		add_array_element();
 }
 }
-function push_blue(){
+function push_second(){
 	current_button = "blue";
   var audio = new Audio();
   audio.src = "sounds/button_1.mp3";
@@ -81,7 +81,7 @@ function push_blue(){
 		add_array_element();
 }
 }
-function push_green(){
+function push_third(){
 	current_button = "green";
   var audio = new Audio();
   audio.src = "sounds/button_1.mp3";
@@ -93,7 +93,7 @@ function push_green(){
 		add_array_element();
 }
 }
-function push_orange(){
+function push_fourth(){
 	current_button = "orange";
   var audio = new Audio();
   audio.src = "sounds/button_1.mp3";
