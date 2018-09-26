@@ -28,33 +28,49 @@ function initialize_array(){
 	result = Math.floor(Math.random() * 4) + 1;
 	switch(result){
 	case 1:
+    audio = new Audio();
+    audio.src = "sounds/button_3.mp3";
+    audio.preload = 'auto';
+    audio.play();
     game_array.push("red");
-	red = document.getElementById("red");
-	red.style.backgroundColor="red";
-	red.style.boxShadow="0 0 0 1px red inset, 0 0 0 2px red inset, 0 7px 0 0 red, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-	setTimeout(default_colour, 500)
-	break;
+  	red = document.getElementById("red");
+  	red.style.backgroundColor="red";
+  	red.style.boxShadow="0 0 0 1px red inset, 0 0 0 2px red inset, 0 7px 0 0 red, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  	setTimeout(default_colour, 500)
+  	break;
 	case 2:
+    audio = new Audio();
+    audio.src = "sounds/button_3.mp3";
+    audio.preload = 'auto';
+    audio.play();
     game_array.push("blue");
-	blue = document.getElementById("blue");
-	blue.style.backgroundColor="blue";
-	blue.style.boxShadow="0 0 0 1px blue inset, 0 0 0 2px blue inset, 0 7px 0 0 blue, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-	setTimeout(default_colour, 500)
-	break;
+  	blue = document.getElementById("blue");
+  	blue.style.backgroundColor="blue";
+  	blue.style.boxShadow="0 0 0 1px blue inset, 0 0 0 2px blue inset, 0 7px 0 0 blue, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  	setTimeout(default_colour, 500)
+  	break;
 	case 3:
+    audio = new Audio();
+    audio.src = "sounds/button_3.mp3";
+    audio.preload = 'auto';
+    audio.play();
     game_array.push("green");
-	green = document.getElementById("green");
-	green.style.backgroundColor="green";
-	green.style.boxShadow="0 0 0 1px green inset, 0 0 0 2px green inset, 0 7px 0 0 green, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-	setTimeout(default_colour, 500)
-	break;
+  	green = document.getElementById("green");
+  	green.style.backgroundColor="green";
+  	green.style.boxShadow="0 0 0 1px green inset, 0 0 0 2px green inset, 0 7px 0 0 green, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  	setTimeout(default_colour, 500)
+  	break;
 	case 4:
+    audio = new Audio();
+    audio.src = "sounds/button_3.mp3";
+    audio.preload = 'auto';
+    audio.play();
     game_array.push("orange");
-	orange = document.getElementById("orange");
-	orange.style.backgroundColor="orange";
-	orange.style.boxShadow="0 0 0 1px orange inset, 0 0 0 2px orange inset, 0 7px 0 0 orange, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-	setTimeout(default_colour, 500)
-	break;
+  	orange = document.getElementById("orange");
+  	orange.style.backgroundColor="orange";
+  	orange.style.boxShadow="0 0 0 1px orange inset, 0 0 0 2px orange inset, 0 7px 0 0 orange, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  	setTimeout(default_colour, 500)
+  	break;
 	}
 }
 function push_first(){
@@ -122,33 +138,49 @@ function default_colour(){
 function add_array_element(){
 	result = Math.floor(Math.random() * 4) + 1;
 	switch(result){
-	case 1:
-    game_array.push("red");
-	red = document.getElementById("red");
-	red.style.backgroundColor="red";
-	red.style.boxShadow="0 0 0 1px red inset, 0 0 0 2px red inset, 0 7px 0 0 red, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-	setTimeout(default_colour, 500)
-	break;
-	case 2:
-    game_array.push("blue");
-	blue = document.getElementById("blue");
-	blue.style.backgroundColor="blue";
-	blue.style.boxShadow="0 0 0 1px blue inset, 0 0 0 2px blue inset, 0 7px 0 0 blue, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-	setTimeout(default_colour, 500)
-	break;
-	case 3:
-    game_array.push("green");
-	green = document.getElementById("green");
-	green.style.backgroundColor="green";
-	green.style.boxShadow="0 0 0 1px green inset, 0 0 0 2px green inset, 0 7px 0 0 green, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-	setTimeout(default_colour, 500)
-	break;
-	case 4:
-    game_array.push("orange");
-	orange = document.getElementById("orange");
-	orange.style.backgroundColor="orange";
-	orange.style.boxShadow="0 0 0 1px orange inset, 0 0 0 2px orange inset, 0 7px 0 0 orange, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-	setTimeout(default_colour, 500)
-	break;
+    case 1:
+      audio = new Audio();
+      audio.src = "sounds/button_3.mp3";
+      audio.preload = 'auto';
+      audio.play();
+      game_array.push("red");
+      red = document.getElementById("red");
+      red.style.backgroundColor="red";
+      red.style.boxShadow="0 0 0 1px red inset, 0 0 0 2px red inset, 0 7px 0 0 red, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+      setTimeout(default_colour, 500)
+      break;
+    case 2:
+      audio = new Audio();
+      audio.src = "sounds/button_3.mp3";
+      audio.preload = 'auto';
+      audio.play();
+      game_array.push("blue");
+      blue = document.getElementById("blue");
+      blue.style.backgroundColor="blue";
+      blue.style.boxShadow="0 0 0 1px blue inset, 0 0 0 2px blue inset, 0 7px 0 0 blue, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+      setTimeout(default_colour, 500)
+      break;
+    case 3:
+      audio = new Audio();
+      audio.src = "sounds/button_3.mp3";
+      audio.preload = 'auto';
+      audio.play();
+      game_array.push("green");
+      green = document.getElementById("green");
+      green.style.backgroundColor="green";
+      green.style.boxShadow="0 0 0 1px green inset, 0 0 0 2px green inset, 0 7px 0 0 green, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+      setTimeout(default_colour, 500)
+      break;
+    case 4:
+      audio = new Audio();
+      audio.src = "sounds/button_3.mp3";
+      audio.preload = 'auto';
+      audio.play();
+      game_array.push("orange");
+      orange = document.getElementById("orange");
+      orange.style.backgroundColor="orange";
+      orange.style.boxShadow="0 0 0 1px orange inset, 0 0 0 2px orange inset, 0 7px 0 0 orange, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+      setTimeout(default_colour, 500)
+      break;
 	}
 }
