@@ -1,18 +1,21 @@
 var game_array = [];
 var player_array = [];
 var level = 0;
+
 function push_power(){
       var audio = new Audio();
 	   audio.src = "sounds/button_2.mp3";
 	   audio.preload = 'auto';
      audio.play();
-                 }
+   }
+
 function push_next(){
      var audio = new Audio();
 	   audio.src = "sounds/button_2.mp3";
 	   audio.preload = 'auto';
      audio.play();
-                 }
+   }
+
 function push_start(){
 		audio = new Audio();
 		audio.src = "sounds/button_2.mp3";
@@ -24,6 +27,7 @@ function push_start(){
     player_array = [];
 		initialize_array();
 	}
+
 function initialize_array(){
 	result = Math.floor(Math.random() * 4) + 1;
 	switch(result){
@@ -73,6 +77,7 @@ function initialize_array(){
   	break;
 	}
 }
+
 function push_first(){
 	current_button = "red";
   var audio = new Audio();
@@ -83,8 +88,9 @@ function push_first(){
 		level = level + 1;
 		document.getElementById("screen").innerHTML = level;
 		add_array_element();
+  }
 }
-}
+
 function push_second(){
 	current_button = "blue";
   var audio = new Audio();
@@ -95,8 +101,9 @@ function push_second(){
 		level = level + 1;
 		document.getElementById("screen").innerHTML =  level;
 		add_array_element();
+  }
 }
-}
+
 function push_third(){
 	current_button = "green";
   var audio = new Audio();
@@ -107,8 +114,9 @@ function push_third(){
 		level = level + 1;
 		document.getElementById("screen").innerHTML =  level;
 		add_array_element();
+  }
 }
-}
+
 function push_fourth(){
 	current_button = "orange";
   var audio = new Audio();
@@ -119,8 +127,9 @@ function push_fourth(){
 		level = level + 1;
 		document.getElementById("screen").innerHTML =  level;
 		add_array_element();
+  }
 }
-}
+
 function default_colour(){
 	red = document.getElementById("red");
 	red.style.backgroundColor="gray";
@@ -135,6 +144,7 @@ function default_colour(){
 	orange.style.backgroundColor="gray";
 	orange.style.boxShadow="0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 }
+
 function add_array_element(){
 	result = Math.floor(Math.random() * 4) + 1;
 	switch(result){
