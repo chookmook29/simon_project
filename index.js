@@ -1,6 +1,9 @@
 var game_array = [];
 var player_array = [];
 var level = 0;
+var current_button;
+var other_count = 0;
+var yet_another_count = 1;
 
 function push_power(){
       var audio = new Audio();
@@ -102,9 +105,15 @@ function push_first(){
   audio.src = "sounds/button_1.mp3";
   audio.preload = 'auto';
   audio.play();
-	if (current_button === game_array[level]){
+  if (current_button === game_array[other_count] && yet_another_count != game_array.length){
+		other_count++;
+    yet_another_count++;
+  }
+  else if (current_button === game_array[other_count] && yet_another_count == game_array.length){
 		level = level + 1;
-		document.getElementById("screen").innerHTML = level;
+    other_count = 0;
+    yet_another_count = 1;
+		document.getElementById("screen").innerHTML =  level;
 		add_array_element();
   }
 }
@@ -115,8 +124,14 @@ function push_second(){
   audio.src = "sounds/button_1.mp3";
   audio.preload = 'auto';
   audio.play();
-	if (current_button === game_array[level]){
+  if (current_button === game_array[other_count] && yet_another_count != game_array.length){
+		other_count++;
+    yet_another_count++;
+  }
+  else if (current_button === game_array[other_count] && yet_another_count == game_array.length){
 		level = level + 1;
+    other_count = 0;
+    yet_another_count = 1;
 		document.getElementById("screen").innerHTML =  level;
 		add_array_element();
   }
@@ -128,8 +143,14 @@ function push_third(){
   audio.src = "sounds/button_1.mp3";
   audio.preload = 'auto';
   audio.play();
-	if (current_button === game_array[level]){
+  if (current_button === game_array[other_count] && yet_another_count != game_array.length){
+		other_count++;
+    yet_another_count++;
+  }
+  else if (current_button === game_array[other_count] && yet_another_count == game_array.length){
 		level = level + 1;
+    other_count = 0;
+    yet_another_count = 1;
 		document.getElementById("screen").innerHTML =  level;
 		add_array_element();
   }
@@ -141,8 +162,14 @@ function push_fourth(){
   audio.src = "sounds/button_1.mp3";
   audio.preload = 'auto';
   audio.play();
-	if (current_button === game_array[level]){
+  if (current_button === game_array[other_count] && yet_another_count != game_array.length){
+		other_count++;
+    yet_another_count++;
+  }
+  else if (current_button === game_array[other_count] && yet_another_count == game_array.length){
 		level = level + 1;
+    other_count = 0;
+    yet_another_count = 1;
 		document.getElementById("screen").innerHTML =  level;
 		add_array_element();
   }
