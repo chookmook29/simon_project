@@ -65,7 +65,7 @@ h1 {
 .console3 {
 	padding-top: 30px;
 	background-color: #444444;
-	color: #00FE00;
+	color: black;/*#00FE00*/
 	font-family: 'PIXEL';
 }
 .console4 {

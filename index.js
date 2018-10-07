@@ -5,14 +5,16 @@ var current_button;
 var other_count = 0;
 var yet_another_count = 1;
 
-function push_power(){
-      var audio = new Audio();
+function push_power_on(){
+     var audio = new Audio();
 	   audio.src = "sounds/button_2.mp3";
 	   audio.preload = 'auto';
      audio.play();
+     document.getElementById("screen").setAttribute('style', "color: #00FE00");
+
    }
 
-function push_next(){
+function push_hard(){
      var audio = new Audio();
 	   audio.src = "sounds/button_2.mp3";
 	   audio.preload = 'auto';
