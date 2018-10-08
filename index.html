@@ -9,12 +9,35 @@
   		<script src="index.js"></script>
     </head>
     <body>
-  		<main>
-  			<section class="row"></section>
-        <section class="row"></section>
-        <section class="row"></section>
-        <section class="row"></section>
-        <section class="row"></section>
+  		<main class="container main-container">
+  			<section class="row justify-content-center">
+          <div class "col">GAME</div>
+        </section>
+        <section class="row text-center">
+          <div class="col-md-4">POWER</div>
+          <div class="col-md-4">START</div>
+          <div class="col-md-4">HARD</div>
+        </section>
+        <section class="row justify-content-center">
+          <button class="col-md-2 offset-md-1 col-md-offset-right-1 power"></button>
+          <button class="col-md-2 offset-md-1 col-md-offset-right-1 start"></button>
+          <button class="col-md-2 offset-md-1 col-md-offset-right-1 hard"></button>
+        </section>
+        <section class="row justify-content-center level">
+          <div id="screen">0000</div>
+        </section>
+        <section class="row">
+          <div id="red" class="col-md-1 offset-md-1 col-md-offset-right-1 red"></div>
+          <div id="blue" class="col-md-1 offset-md-1 col-md-offset-right-1 blue"></div>
+          <div id="green" class="col-md-1 offset-md-1 col-md-offset-right-1  green"></div>
+          <div id="orange" class="col-md-1 offset-md-1 col-md-offset-right-1 orange"></div>
+        </section>
+        <section class="row">
+          <button class="col-md-3 button"></button>
+          <button class="col-md-3 button"></button>
+          <button class="col-md-3 button"></button>
+          <button class="col-md-3 button"></button>
+        </section>
   		</main>
     </body>
 </html>
