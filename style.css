@@ -6,7 +6,7 @@ src: url("fonts/digital-7.ttf");
     background-color: #5B5B5B;
 }
 main {
-	background-color: #444444;
+	background-color: #282828;
 }  
 #screen {
 	font-size: 4rem;
@@ -14,7 +14,7 @@ main {
 }    
 .hard, .power, .start {
     background-color: red;
-    height: 20px;
+    height: 40px;
 	border: none;
 	text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
 	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 8px 0 0 #BC2200, 0 8px 0 1px #000000, 0 8px 8px 1px #000000;
@@ -29,41 +29,44 @@ main {
 }
 .console2 {
 	z-index: 1;
-	background-color: #444444;
+	background-color: #282828;
 	font-style: italic;
 	text-shadow: 3px 0px 2px #000000;
 
 }
 .level {
 	margin-top: 30px;
-	background-color: #444444;
+	background-color: #282828;
 	color: black;/*#00FE00*/
 	font-family: 'PIXEL';
 }
 .console4 {
 	z-index: -1;
-	background-color: #444444;
+	background-color: #282828;
 	height: 30px;
 }
 section  {
 	color: white;
 }
 .red, .blue, .green, .orange {
-	border-radius: 20px;
-	height: 30px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	border-radius: 30px;
+	height: 60px;
 	background-color: gray;
 	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707;
 }
 .button {
 	position: relative;
 	margin-top: 30px;
-	height: 60px;
-	background-color: #444444;
+	height: 70px;
+	margin-bottom: 30px;
+	background-color: #282828;
 	border: none;
-	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 7px 0 0 #3F3F3F, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
+	box-shadow: 0 0 0 1px #161616 inset, 0 0 0 2px #2D2D2D inset, 0 7px 0 0 #333333, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
 }
 .button:active {
-	box-shadow: 0 0 0 1px #545454 inset, 0 0 0 2px #565656 inset, 0 0 0 1px #020202;
+	box-shadow: 0 0 0 1px #161616 inset, 0 0 0 2px #2D2D2D inset, 0 0 0 1px #020202;
 	transform: translateY(10px); 
 	-webkit-transform: translateY(10px);  
 }
