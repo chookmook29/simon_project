@@ -25,7 +25,7 @@ main {
 	-webkit-transform: translateY(10px);
 }
 .hard:focus, .power:focus, .start:focus {
-	outline:0;
+	outline: 0;
 }
 .console2 {
 	z-index: 1;
@@ -83,4 +83,7 @@ main {
 }
 .col-md-offset-right-1 {
     margin-right: 8.33333333%;
+}
+#screen{
+	text-align: center;
 }

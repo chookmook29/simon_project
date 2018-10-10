@@ -28,7 +28,14 @@ function push_start(){
 		audio.play();
     level = 0;
     count = 0;
-    document.getElementById("screen").innerHTML = level;
+    if (level.toString().length === 1){
+      document.getElementById("screen").innerHTML = "000" + level;}
+    else if (level.toString().length === 2){
+      document.getElementById("screen").innerHTML = "00" + level;}
+    else if (level.toString().length === 3){
+      document.getElementById("screen").innerHTML = "0" + level;}
+    else if (level.toString().length === 4){
+      document.getElementById("screen").innerHTML = level;}
     game_array = [];
     player_array = [];
 		var1 =  setTimeout(initialize_array,1000);
@@ -115,7 +122,14 @@ function push_first(){
 		level = level + 1;
     other_count = 0;
     yet_another_count = 1;
-		document.getElementById("screen").innerHTML =  level;
+      if (level.toString().length === 1){
+        document.getElementById("screen").innerHTML = "000" + level;}
+      else if (level.toString().length === 2){
+        document.getElementById("screen").innerHTML = "00" + level;}
+      else if (level.toString().length === 3){
+        document.getElementById("screen").innerHTML = "0" + level;}
+      else if (level.toString().length === 4){
+        document.getElementById("screen").innerHTML = level;}
 		add_array_element();
   }
 }
@@ -134,7 +148,14 @@ function push_second(){
 		level = level + 1;
     other_count = 0;
     yet_another_count = 1;
-		document.getElementById("screen").innerHTML =  level;
+    if (level.toString().length === 1){
+      document.getElementById("screen").innerHTML = "000" + level;}
+    else if (level.toString().length === 2){
+      document.getElementById("screen").innerHTML = "00" + level;}
+    else if (level.toString().length === 3){
+      document.getElementById("screen").innerHTML = "0" + level;}
+    else if (level.toString().length === 4){
+      document.getElementById("screen").innerHTML = level;}
 		add_array_element();
   }
 }
@@ -153,7 +174,14 @@ function push_third(){
 		level = level + 1;
     other_count = 0;
     yet_another_count = 1;
-		document.getElementById("screen").innerHTML =  level;
+    if (level.toString().length === 1){
+      document.getElementById("screen").innerHTML = "000" + level;}
+    else if (level.toString().length === 2){
+      document.getElementById("screen").innerHTML = "00" + level;}
+    else if (level.toString().length === 3){
+      document.getElementById("screen").innerHTML = "0" + level;}
+    else if (level.toString().length === 4){
+      document.getElementById("screen").innerHTML = level;}
 		add_array_element();
   }
 }
@@ -172,7 +200,14 @@ function push_fourth(){
 		level = level + 1;
     other_count = 0;
     yet_another_count = 1;
-		document.getElementById("screen").innerHTML =  level;
+    if (level.toString().length === 1){
+      document.getElementById("screen").innerHTML = "000" + level;}
+    else if (level.toString().length === 2){
+      document.getElementById("screen").innerHTML = "00" + level;}
+    else if (level.toString().length === 3){
+      document.getElementById("screen").innerHTML = "0" + level;}
+    else if (level.toString().length === 4){
+      document.getElementById("screen").innerHTML = level;}
 		add_array_element();
   }
 }
