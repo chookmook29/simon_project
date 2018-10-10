@@ -13,8 +13,17 @@ function push_power_on(){
 	   audio.preload = 'auto';
      audio.play();
      document.getElementById("screen").setAttribute('style', "color: #00FE00");
-
+     document.getElementById("power").onclick = function(){push_power_off()};
    }
+
+function push_power_off(){
+      var audio = new Audio();
+   	  audio.src = "sounds/button_2.mp3";
+   	  audio.preload = 'auto';
+      audio.play();
+      document.getElementById("screen").setAttribute('style', "color: black");
+      document.getElementById("power").onclick = function(){push_power_on()};
+  }
 
 function push_hard(){
      var audio = new Audio();
