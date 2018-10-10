@@ -4,6 +4,8 @@ var level = 0;
 var current_button;
 var other_count = 0;
 var yet_another_count = 1;
+const first_interval = 1000;
+const second_interval = 1050;
 
 function push_power_on(){
      var audio = new Audio();
@@ -46,23 +48,23 @@ function initialize_array(){
 	switch(result){
 	case 1:
     game_array.push("red");
-    var2 = setInterval(display_array,1000);
-    var3 = setInterval(display_clear,1050);
+    var2 = setInterval(display_array,first_interval);
+    var3 = setInterval(display_clear,second_interval);
   	break;
 	case 2:
     game_array.push("blue");
-    var2 = setInterval(display_array,1000);
-    var3 = setInterval(display_clear,1050);
+    var2 = setInterval(display_array,first_interval);
+    var3 = setInterval(display_clear,second_interval);
     break;
 	case 3:
     game_array.push("green");
-    var2 = setInterval(display_array,1000);
-    var3 = setInterval(display_clear,1050);
+    var2 = setInterval(display_array,first_interval);
+    var3 = setInterval(display_clear,second_interval);
     break;
 	case 4:
     game_array.push("orange");
-    var2 = setInterval(display_array,1000);
-    var3 = setInterval(display_clear,1050);
+    var2 = setInterval(display_array,first_interval);
+    var3 = setInterval(display_clear,second_interval);
     break;
 	}
 }
@@ -233,26 +235,26 @@ function add_array_element(){
     case 1:
       game_array.push("red");
       count = 0;
-      var2 = setInterval(display_array,1000);
-      var3 = setInterval(display_clear,1050);
+      var2 = setInterval(display_array,first_interval);
+      var3 = setInterval(display_clear,second_interval);
     	break;
   	case 2:
       game_array.push("blue");
       count = 0;
-      var2 = setInterval(display_array,1000);
-      var3 = setInterval(display_clear,1050);
+      var2 = setInterval(display_array,first_interval);
+      var3 = setInterval(display_clear,second_interval);
       break;
   	case 3:
       game_array.push("green");
       count = 0;
-      var2 = setInterval(display_array,1000);
-      var3 = setInterval(display_clear,1050);
+      var2 = setInterval(display_array,first_interval);
+      var3 = setInterval(display_clear,second_interval);
       break;
   	case 4:
       game_array.push("orange");
       count = 0;
-      var2 = setInterval(display_array,1000);
-      var3 = setInterval(display_clear,1050);
+      var2 = setInterval(display_array,first_interval);
+      var3 = setInterval(display_clear,second_interval);
       break;
 	}
 }
