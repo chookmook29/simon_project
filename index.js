@@ -40,34 +40,9 @@ function push_start(){
       document.getElementById("screen").innerHTML = level;}
     game_array = [];
     player_array = [];
-		var1 =  setTimeout(initialize_array,1000);
+		var1 =  setTimeout(add_array_element,1000);
 	}
 
-function initialize_array(){
-	result = Math.floor(Math.random() * 4) + 1;
-	switch(result){
-	case 1:
-    game_array.push("red");
-    var2 = setInterval(display_array,first_interval);
-    var3 = setInterval(display_clear,second_interval);
-  	break;
-	case 2:
-    game_array.push("blue");
-    var2 = setInterval(display_array,first_interval);
-    var3 = setInterval(display_clear,second_interval);
-    break;
-	case 3:
-    game_array.push("green");
-    var2 = setInterval(display_array,first_interval);
-    var3 = setInterval(display_clear,second_interval);
-    break;
-	case 4:
-    game_array.push("orange");
-    var2 = setInterval(display_array,first_interval);
-    var3 = setInterval(display_clear,second_interval);
-    break;
-	}
-}
 function display_array() {
   audio = new Audio();
   audio.src = "sounds/button_3.mp3";
