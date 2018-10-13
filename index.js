@@ -5,7 +5,9 @@ var current_button;
 var player_count = 0;
 var game_a_length_check = 1;
 const first_interval = 1000;
-const second_interval = 1050;
+const second_interval = 1080;
+var array_visible;
+var array_hidden;
 var colors = ["red", "blue", "green", "orange"];
 
 function push_power_on(){
@@ -14,6 +16,7 @@ function push_power_on(){
 	   audio.preload = 'auto';
      audio.play();
      document.getElementById("screen").innerHTML = "0000"
+     document.getElementById("start").onclick = function(){push_start()};
      document.getElementById("screen").setAttribute('style', "color: #00FE00");
      document.getElementById("power").onclick = function(){push_power_off()};
    }
@@ -23,8 +26,9 @@ function push_power_off(){
    	  audio.src = "sounds/button_2.mp3";
    	  audio.preload = 'auto';
       audio.play();
-      clearInterval(var2);
-      clearInterval(var3);
+      clearInterval(array_visible);
+      clearInterval(array_hidden);
+      document.getElementById("start").onclick = function(){push_empty()};
       document.getElementById("screen").setAttribute('style', "color: black");
       document.getElementById("power").onclick = function(){push_power_on()};
   }
@@ -55,6 +59,12 @@ function push_start(){
     player_array = [];
 		var1 =  setTimeout(add_array_element,1000);
 	}
+function push_empty(){
+  		audio = new Audio();
+  		audio.src = "sounds/button_2.mp3";
+  		audio.preload = 'auto';
+  		audio.play();
+  	}
 
 function display_array() {
   audio = new Audio();
@@ -77,7 +87,7 @@ function display_array() {
   }
   count++;
   if (count == game_array.length){
-    clearInterval(var2);
+    clearInterval(array_visible);
   }
 }
 
@@ -91,7 +101,7 @@ function display_clear(){
   set_background(color);
   });
   if (count == game_array.length){
-    clearInterval(var3);
+    clearInterval(array_hidden);
   }
 }
 
@@ -206,26 +216,26 @@ function add_array_element(){
     case 1:
       game_array.push("red");
       count = 0;
-      var2 = setInterval(display_array,first_interval);
-      var3 = setInterval(display_clear,second_interval);
+      array_visible = setInterval(display_array,first_interval);
+      array_hidden = setInterval(display_clear,second_interval);
     	break;
   	case 2:
       game_array.push("blue");
       count = 0;
-      var2 = setInterval(display_array,first_interval);
-      var3 = setInterval(display_clear,second_interval);
+      array_visible = setInterval(display_array,first_interval);
+      array_hidden = setInterval(display_clear,second_interval);
       break;
   	case 3:
       game_array.push("green");
       count = 0;
-      var2 = setInterval(display_array,first_interval);
-      var3 = setInterval(display_clear,second_interval);
+      array_visible = setInterval(display_array,first_interval);
+      array_hidden = setInterval(display_clear,second_interval);
       break;
   	case 4:
       game_array.push("orange");
       count = 0;
-      var2 = setInterval(display_array,first_interval);
-      var3 = setInterval(display_clear,second_interval);
+      array_visible = setInterval(display_array,first_interval);
+      array_hidden = setInterval(display_clear,second_interval);
       break;
 	}
 }

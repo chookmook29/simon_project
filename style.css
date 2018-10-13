@@ -13,7 +13,7 @@ main {
 }  
 #screen {
 	font-size: 4rem;
-	background-color: black;
+	background-color: #000020;
 }    
 .hard, .power, .start {
     background-color: red;
