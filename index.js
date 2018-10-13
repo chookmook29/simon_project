@@ -2,8 +2,8 @@ var game_array = [];
 var player_array = [];
 var level = 0;
 var current_button;
-var other_count = 0;
-var yet_another_count = 1;
+var player_count = 0;
+var game_a_length_check = 1;
 const first_interval = 1000;
 const second_interval = 1050;
 var colors = ["red", "blue", "green", "orange"];
@@ -30,10 +30,10 @@ function push_power_off(){
   }
 
 function push_hard(){
-     var audio = new Audio();
-	   audio.src = "sounds/button_2.mp3";
-	   audio.preload = 'auto';
-     audio.play();
+      audio = new Audio();
+      audio.src = "sounds/button_2.mp3";
+      audio.preload = 'auto';
+      audio.play();
    }
 
 function push_start(){
@@ -102,14 +102,14 @@ function push_first(){
   audio.src = "sounds/button_1.mp3";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[other_count] && yet_another_count != game_array.length){
-		other_count++;
-    yet_another_count++;
+  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
+		player_count++;
+    game_a_length_check++;
   }
-  else if (current_button === game_array[other_count] && yet_another_count == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
 		level = level + 1;
-    other_count = 0;
-    yet_another_count = 1;
+    player_count = 0;
+    game_a_length_check = 1;
       if (level.toString().length === 1){
         document.getElementById("screen").innerHTML = "000" + level;}
       else if (level.toString().length === 2){
@@ -128,14 +128,14 @@ function push_second(){
   audio.src = "sounds/button_1.mp3";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[other_count] && yet_another_count != game_array.length){
-		other_count++;
-    yet_another_count++;
+  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
+		player_count++;
+    game_a_length_check++;
   }
-  else if (current_button === game_array[other_count] && yet_another_count == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
 		level = level + 1;
-    other_count = 0;
-    yet_another_count = 1;
+    player_count = 0;
+    game_a_length_check = 1;
     if (level.toString().length === 1){
       document.getElementById("screen").innerHTML = "000" + level;}
     else if (level.toString().length === 2){
@@ -154,14 +154,14 @@ function push_third(){
   audio.src = "sounds/button_1.mp3";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[other_count] && yet_another_count != game_array.length){
-		other_count++;
-    yet_another_count++;
+  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
+		player_count++;
+    game_a_length_check++;
   }
-  else if (current_button === game_array[other_count] && yet_another_count == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
 		level = level + 1;
-    other_count = 0;
-    yet_another_count = 1;
+    player_count = 0;
+    game_a_length_check = 1;
     if (level.toString().length === 1){
       document.getElementById("screen").innerHTML = "000" + level;}
     else if (level.toString().length === 2){
@@ -180,14 +180,14 @@ function push_fourth(){
   audio.src = "sounds/button_1.mp3";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[other_count] && yet_another_count != game_array.length){
-		other_count++;
-    yet_another_count++;
+  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
+		player_count++;
+    game_a_length_check++;
   }
-  else if (current_button === game_array[other_count] && yet_another_count == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
 		level = level + 1;
-    other_count = 0;
-    yet_another_count = 1;
+    player_count = 0;
+    game_a_length_check = 1;
     if (level.toString().length === 1){
       document.getElementById("screen").innerHTML = "000" + level;}
     else if (level.toString().length === 2){
