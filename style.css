@@ -4,6 +4,9 @@ src: url("fonts/digital-7.ttf");
 
 }body {
     background-color: #5B5B5B;
+	background-image: url("table.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 main {
 	background-color: #282828;
