@@ -30,6 +30,7 @@ function push_power_off(){
       clearInterval(array_hidden);
       document.getElementById("start").onclick = function(){push_empty()};
       document.getElementById("screen").setAttribute('style', "color: black");
+      document.getElementById("screen").innerHTML = "8888"
       document.getElementById("power").onclick = function(){push_power_on()};
   }
 
