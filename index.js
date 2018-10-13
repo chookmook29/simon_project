@@ -13,6 +13,7 @@ function push_power_on(){
 	   audio.src = "sounds/button_2.mp3";
 	   audio.preload = 'auto';
      audio.play();
+     document.getElementById("screen").innerHTML = "0000"
      document.getElementById("screen").setAttribute('style', "color: #00FE00");
      document.getElementById("power").onclick = function(){push_power_off()};
    }
@@ -22,6 +23,8 @@ function push_power_off(){
    	  audio.src = "sounds/button_2.mp3";
    	  audio.preload = 'auto';
       audio.play();
+      clearInterval(var2);
+      clearInterval(var3);
       document.getElementById("screen").setAttribute('style', "color: black");
       document.getElementById("power").onclick = function(){push_power_on()};
   }
@@ -38,8 +41,8 @@ function push_start(){
 		audio.src = "sounds/button_2.mp3";
 		audio.preload = 'auto';
 		audio.play();
-    level = 0;
     count = 0;
+    level = 0;
     if (level.toString().length === 1){
       document.getElementById("screen").innerHTML = "000" + level;}
     else if (level.toString().length === 2){
