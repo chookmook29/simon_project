@@ -21,7 +21,7 @@
         <section class="row justify-content-center">
           <button class="col-md-2 offset-md-1 col-md-offset-right-1 power" id="power" onclick="push_power_on()"></button>
           <button class="col-md-2 offset-md-1 col-md-offset-right-1 start" id="start" onclick="push_empty()"></button>
-          <button class="col-md-2 offset-md-1 col-md-offset-right-1 hard" onclick="push_hard()"></button>
+          <button class="col-md-2 offset-md-1 col-md-offset-right-1 hard" id="hard" onclick="push_empty()"></button>
         </section>
         <section class="row justify-content-center level">
           <div id="screen" class="col-md-3">8888</div>
@@ -33,10 +33,10 @@
           <div id="orange" class="col-md-1 offset-md-1 col-md-offset-right-1 orange"></div>
         </section>
         <section class="row">
-          <button class="col-md-1 offset-md-1 col-md-offset-right-1 button" onclick="push_first()"></button>
-          <button class="col-md-1 offset-md-1 col-md-offset-right-1 button" onclick="push_second()"></button>
-          <button class="col-md-1 offset-md-1 col-md-offset-right-1 button" onclick="push_third()"></button>
-          <button class="col-md-1 offset-md-1 col-md-offset-right-1 button" onclick="push_fourth()"></button>
+          <button id="first" class="col-md-1 offset-md-1 col-md-offset-right-1 button" onclick="push_first()"></button>
+          <button id="second" class="col-md-1 offset-md-1 col-md-offset-right-1 button" onclick="push_second()"></button>
+          <button id="third" class="col-md-1 offset-md-1 col-md-offset-right-1 button" onclick="push_third()"></button>
+          <button id="fourth" class="col-md-1 offset-md-1 col-md-offset-right-1 button" onclick="push_fourth()"></button>
         </section>
   		</main>
     </body>

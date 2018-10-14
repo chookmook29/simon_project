@@ -1,5 +1,4 @@
 var game_array = [];
-var player_array = [];
 var level = 0;
 var current_button;
 var player_count = 0;
@@ -17,6 +16,7 @@ function push_power_on(){
      audio.play();
      document.getElementById("screen").innerHTML = "0000"
      document.getElementById("start").onclick = function(){push_start()};
+     document.getElementById("hard").onclick = function(){push_hard()};
      document.getElementById("screen").setAttribute('style', "color: #00FE00");
      document.getElementById("power").onclick = function(){push_power_off()};
    }
@@ -29,6 +29,7 @@ function push_power_off(){
       clearInterval(array_visible);
       clearInterval(array_hidden);
       document.getElementById("start").onclick = function(){push_empty()};
+      document.getElementById("hard").onclick = function(){push_empty()};
       document.getElementById("screen").setAttribute('style', "color: black");
       document.getElementById("screen").innerHTML = "8888"
       document.getElementById("power").onclick = function(){push_power_on()};
@@ -39,6 +40,20 @@ function push_hard(){
       audio.src = "sounds/button_2.mp3";
       audio.preload = 'auto';
       audio.play();
+      count = 0;
+      level = 0;
+      clearInterval(array_visible);
+      clearInterval(array_hidden);
+      if (level.toString().length === 1){
+        document.getElementById("screen").innerHTML = "000" + level;}
+      else if (level.toString().length === 2){
+        document.getElementById("screen").innerHTML = "00" + level;}
+      else if (level.toString().length === 3){
+        document.getElementById("screen").innerHTML = "0" + level;}
+      else if (level.toString().length === 4){
+        document.getElementById("screen").innerHTML = level;}
+      game_array = [];
+  		var1 =  setTimeout(add_array_hard,1000);
    }
 
 function push_start(){
@@ -48,6 +63,8 @@ function push_start(){
 		audio.play();
     count = 0;
     level = 0;
+    clearInterval(array_visible);
+    clearInterval(array_hidden);
     if (level.toString().length === 1){
       document.getElementById("screen").innerHTML = "000" + level;}
     else if (level.toString().length === 2){
@@ -57,7 +74,6 @@ function push_start(){
     else if (level.toString().length === 4){
       document.getElementById("screen").innerHTML = level;}
     game_array = [];
-    player_array = [];
 		var1 =  setTimeout(add_array_element,1000);
 	}
 function push_empty(){
@@ -88,10 +104,42 @@ function display_array() {
   }
   count++;
   if (count == game_array.length){
+    document.getElementById("first").onclick = function(){push_first()};
+    document.getElementById("second").onclick = function(){push_second()};
+    document.getElementById("third").onclick = function(){push_third()};
+    document.getElementById("fourth").onclick = function(){push_fourth()};
     clearInterval(array_visible);
   }
 }
-
+function display_array_hard() {
+  audio = new Audio();
+  audio.src = "sounds/button_3.mp3";
+  audio.preload = 'auto';
+  audio.play();
+  colour = document.getElementById(game_array[count]);
+  main = document.getElementsByTagName("main");
+  colour.style.backgroundColor=game_array[count];
+  if(game_array[count] === "red"){
+    colour.style.boxShadow = "0 0 0 1px red inset, 0 0 0 2px red inset, 0 7px 0 0 red, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  }
+  else if(game_array[count] === "blue"){
+    colour.style.boxShadow="0 0 0 1px blue inset, 0 0 0 2px blue inset, 0 7px 0 0 blue, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  }
+  else if(game_array[count] === "green"){
+    colour.style.boxShadow = "0 0 0 1px green inset, 0 0 0 2px green inset, 0 7px 0 0 green, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  }
+  else{
+    colour.style.boxShadow =" 0 0 0 1px orange inset, 0 0 0 2px orange inset, 0 7px 0 0 orange, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  }
+  count++;
+  if (count == game_array.length){
+    document.getElementById("first").onclick = function(){first_hard()};
+    document.getElementById("second").onclick = function(){second_hard()};
+    document.getElementById("third").onclick = function(){third_hard()};
+    document.getElementById("fourth").onclick = function(){fourth_hard()};
+    clearInterval(array_visible);
+  }
+}
 function set_background(color) {
   var element = document.getElementById(color);
   element.style.backgroundColor = "gray";
@@ -210,8 +258,115 @@ function push_fourth(){
 		add_array_element();
   }
 }
-
+function first_hard(){
+	current_button = "red";
+  var audio = new Audio();
+  audio.src = "sounds/button_1.mp3";
+  audio.preload = 'auto';
+  audio.play();
+  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
+		player_count++;
+    game_a_length_check++;
+  }
+  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+		level = level + 1;
+    player_count = 0;
+    game_a_length_check = 1;
+    game_array = [];
+      if (level.toString().length === 1){
+        document.getElementById("screen").innerHTML = "000" + level;}
+      else if (level.toString().length === 2){
+        document.getElementById("screen").innerHTML = "00" + level;}
+      else if (level.toString().length === 3){
+        document.getElementById("screen").innerHTML = "0" + level;}
+      else if (level.toString().length === 4){
+        document.getElementById("screen").innerHTML = level;}
+		add_array_hard();
+  }
+}
+function second_hard(){
+	current_button = "blue";
+  var audio = new Audio();
+  audio.src = "sounds/button_1.mp3";
+  audio.preload = 'auto';
+  audio.play();
+  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
+		player_count++;
+    game_a_length_check++;
+  }
+  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+		level = level + 1;
+    player_count = 0;
+    game_a_length_check = 1;
+    game_array = [];
+      if (level.toString().length === 1){
+        document.getElementById("screen").innerHTML = "000" + level;}
+      else if (level.toString().length === 2){
+        document.getElementById("screen").innerHTML = "00" + level;}
+      else if (level.toString().length === 3){
+        document.getElementById("screen").innerHTML = "0" + level;}
+      else if (level.toString().length === 4){
+        document.getElementById("screen").innerHTML = level;}
+		add_array_hard();
+  }
+}
+function third_hard(){
+	current_button = "green";
+  var audio = new Audio();
+  audio.src = "sounds/button_1.mp3";
+  audio.preload = 'auto';
+  audio.play();
+  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
+		player_count++;
+    game_a_length_check++;
+  }
+  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+		level = level + 1;
+    player_count = 0;
+    game_a_length_check = 1;
+    game_array = [];
+      if (level.toString().length === 1){
+        document.getElementById("screen").innerHTML = "000" + level;}
+      else if (level.toString().length === 2){
+        document.getElementById("screen").innerHTML = "00" + level;}
+      else if (level.toString().length === 3){
+        document.getElementById("screen").innerHTML = "0" + level;}
+      else if (level.toString().length === 4){
+        document.getElementById("screen").innerHTML = level;}
+		add_array_hard();
+  }
+}
+function fourth_hard(){
+	current_button = "orange";
+  var audio = new Audio();
+  audio.src = "sounds/button_1.mp3";
+  audio.preload = 'auto';
+  audio.play();
+  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
+		player_count++;
+    game_a_length_check++;
+  }
+  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+		level = level + 1;
+    player_count = 0;
+    game_a_length_check = 1;
+    game_array = [];
+      if (level.toString().length === 1){
+        document.getElementById("screen").innerHTML = "000" + level;}
+      else if (level.toString().length === 2){
+        document.getElementById("screen").innerHTML = "00" + level;}
+      else if (level.toString().length === 3){
+        document.getElementById("screen").innerHTML = "0" + level;}
+      else if (level.toString().length === 4){
+        document.getElementById("screen").innerHTML = level;}
+		add_array_hard();
+  }
+}
 function add_array_element(){
+  document.getElementById("first").onclick = function(){push_empty()};
+  document.getElementById("second").onclick = function(){push_empty()};
+  document.getElementById("third").onclick = function(){push_empty()};
+  document.getElementById("fourth").onclick = function(){push_empty()};
 	result = Math.floor(Math.random() * 4) + 1;
 	switch(result){
     case 1:
@@ -239,4 +394,27 @@ function add_array_element(){
       array_hidden = setInterval(display_clear,second_interval);
       break;
 	}
+}
+function add_array_hard(){
+  document.getElementById("first").onclick = function(){push_empty()};
+  document.getElementById("second").onclick = function(){push_empty()};
+  document.getElementById("third").onclick = function(){push_empty()};
+  document.getElementById("fourth").onclick = function(){push_empty()};
+  for (x = 0; x<= level;x++){
+  result = Math.floor(Math.random() * 4) + 1;
+	if(result === 1){
+      game_array.push("red");
+      count = 0;}
+  else if(result === 2){
+      game_array.push("blue");
+      count = 0;}
+  else if(result === 3){
+      game_array.push("green");
+      count = 0;}
+  else {
+      game_array.push("orange");
+      count = 0;}
+	   }
+   array_visible = setInterval(display_array_hard,first_interval);
+   array_hidden = setInterval(display_clear,second_interval);
 }
