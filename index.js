@@ -11,7 +11,7 @@ var colors = ["red", "blue", "green", "orange"];
 
 function push_power_on(){
      var audio = new Audio();
-	   audio.src = "sounds/button_2.mp3";
+	   audio.src = "sounds/button_2.wav";
 	   audio.preload = 'auto';
      audio.play();
      document.getElementById("screen").innerHTML = "0000"
@@ -23,7 +23,7 @@ function push_power_on(){
 
 function push_power_off(){
       var audio = new Audio();
-   	  audio.src = "sounds/button_2.mp3";
+   	  audio.src = "sounds/button_2.wav";
    	  audio.preload = 'auto';
       audio.play();
       clearInterval(array_visible);
@@ -37,7 +37,7 @@ function push_power_off(){
 
 function push_hard(){
       audio = new Audio();
-      audio.src = "sounds/button_2.mp3";
+      audio.src = "sounds/button_2.wav";
       audio.preload = 'auto';
       audio.play();
       count = 0;
@@ -58,7 +58,7 @@ function push_hard(){
 
 function push_start(){
 		audio = new Audio();
-		audio.src = "sounds/button_2.mp3";
+		audio.src = "sounds/button_2.wav";
 		audio.preload = 'auto';
 		audio.play();
     count = 0;
@@ -78,14 +78,14 @@ function push_start(){
 	}
 function push_empty(){
   		audio = new Audio();
-  		audio.src = "sounds/button_2.mp3";
+  		audio.src = "sounds/button_2.wav";
   		audio.preload = 'auto';
   		audio.play();
   	}
 
 function display_array() {
   audio = new Audio();
-  audio.src = "sounds/button_3.mp3";
+  audio.src = "sounds/button_3.wav";
   audio.preload = 'auto';
   audio.play();
   colour = document.getElementById(game_array[count]);
@@ -113,7 +113,7 @@ function display_array() {
 }
 function display_array_hard() {
   audio = new Audio();
-  audio.src = "sounds/button_3.mp3";
+  audio.src = "sounds/button_3.wav";
   audio.preload = 'auto';
   audio.play();
   colour = document.getElementById(game_array[count]);
@@ -158,7 +158,7 @@ function display_clear(){
 function push_first(){
 	current_button = "red";
   var audio = new Audio();
-  audio.src = "sounds/button_1.mp3";
+  audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
   if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
@@ -184,7 +184,7 @@ function push_first(){
 function push_second(){
 	current_button = "blue";
   var audio = new Audio();
-  audio.src = "sounds/button_1.mp3";
+  audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
   if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
@@ -210,7 +210,7 @@ function push_second(){
 function push_third(){
 	current_button = "green";
   var audio = new Audio();
-  audio.src = "sounds/button_1.mp3";
+  audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
   if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
@@ -236,7 +236,7 @@ function push_third(){
 function push_fourth(){
 	current_button = "orange";
   var audio = new Audio();
-  audio.src = "sounds/button_1.mp3";
+  audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
   if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
@@ -261,7 +261,7 @@ function push_fourth(){
 function first_hard(){
 	current_button = "red";
   var audio = new Audio();
-  audio.src = "sounds/button_1.mp3";
+  audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
   if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
@@ -287,7 +287,7 @@ function first_hard(){
 function second_hard(){
 	current_button = "blue";
   var audio = new Audio();
-  audio.src = "sounds/button_1.mp3";
+  audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
   if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
@@ -313,7 +313,7 @@ function second_hard(){
 function third_hard(){
 	current_button = "green";
   var audio = new Audio();
-  audio.src = "sounds/button_1.mp3";
+  audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
   if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
@@ -339,7 +339,7 @@ function third_hard(){
 function fourth_hard(){
 	current_button = "orange";
   var audio = new Audio();
-  audio.src = "sounds/button_1.mp3";
+  audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
   if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
