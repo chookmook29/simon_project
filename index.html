@@ -9,7 +9,7 @@
   		<script src="index.js"></script>
     </head>
     <body>
-  		<main class="container main-container"><!-- Main frame of the board-->
+  		<main id="main" class="container main-container"><!-- Main frame of the board-->
   			<section class="row justify-content-center">
           <div class "col">GAME</div><!--Name or logo-->
         </section>
@@ -23,7 +23,7 @@
           <button class="col-md-2 offset-md-1 col-md-offset-right-1 start" id="start" onclick="push_empty()"></button><!--Start button & event handler-->
           <button class="col-md-2 offset-md-1 col-md-offset-right-1 hard" id="hard" onclick="push_empty()"></button><!--Hard mode button & event handler-->
         </section>
-        <section class="row justify-content-center level">
+        <section id="screen_panel" class="row justify-content-center level">
           <div id="screen" class="col-md-3">8888</div><!--Display with initial value-->
         </section>
         <section class="row">

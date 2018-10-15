@@ -8,6 +8,10 @@ const second_interval = 1080;
 var array_visible;
 var array_hidden;
 var colors = ["red", "blue", "green", "orange"];
+var red;
+var blue;
+var green;
+var orange;
 
 function push_power_on(){
      var audio = new Audio();
@@ -63,6 +67,14 @@ function push_start(){
 		audio.play();
     count = 0;
     level = 0;
+    var hsl_red = String(Math.floor(Math.random() * 361));
+    red = "hsl(" + hsl_red + ", 60%, 70%)";
+    var hsl_blue = String(Math.floor(Math.random() * 361));
+    blue = "hsl(" + hsl_blue + ", 60%, 70%)";
+    var hsl_green = String(Math.floor(Math.random() * 361));
+    green = "hsl(" + hsl_green + ", 60%, 70%)";
+    var hsl_orange = String(Math.floor(Math.random() * 361));
+    orange = "hsl(" + hsl_orange + ", 60%, 70%)";
     clearInterval(array_visible);
     clearInterval(array_hidden);
     if (level.toString().length === 1){
@@ -91,16 +103,20 @@ function display_array() {
   colour = document.getElementById(game_array[count]);
   colour.style.backgroundColor=game_array[count];
   if(game_array[count] === "red"){
-    colour.style.boxShadow = "0 0 0 1px red inset, 0 0 0 2px red inset, 0 7px 0 0 red, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+    colour.style.backgroundColor = red;
+    colour.style.boxShadow = "0 0 0 1px " + red + "inset, 0 0 0 2px " + red + "inset, 0 7px 0 0 " + red + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else if(game_array[count] === "blue"){
-    colour.style.boxShadow="0 0 0 1px blue inset, 0 0 0 2px blue inset, 0 7px 0 0 blue, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+    colour.style.backgroundColor = blue;
+    colour.style.boxShadow = "0 0 0 1px " + blue + "inset, 0 0 0 2px " + blue + "inset, 0 7px 0 0 " + blue + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else if(game_array[count] === "green"){
-    colour.style.boxShadow = "0 0 0 1px green inset, 0 0 0 2px green inset, 0 7px 0 0 green, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+    colour.style.backgroundColor = green;
+    colour.style.boxShadow = "0 0 0 1px " + green + "inset, 0 0 0 2px " + green + "inset, 0 7px 0 0 " + green + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else{
-    colour.style.boxShadow =" 0 0 0 1px orange inset, 0 0 0 2px orange inset, 0 7px 0 0 orange, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+    colour.style.backgroundColor = orange;
+    colour.style.boxShadow = "0 0 0 1px " + orange + "inset, 0 0 0 2px " + orange + "inset, 0 7px 0 0 " + orange + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   count++;
   if (count == game_array.length){
@@ -117,19 +133,25 @@ function display_array_hard() {
   audio.preload = 'auto';
   audio.play();
   colour = document.getElementById(game_array[count]);
-  main = document.getElementsByTagName("main");
-  colour.style.backgroundColor=game_array[count];
   if(game_array[count] === "red"){
-    colour.style.boxShadow = "0 0 0 1px red inset, 0 0 0 2px red inset, 0 7px 0 0 red, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+    hsl = String(Math.floor(Math.random() * 361));
+    colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 70%)";
+    colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 70%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 70%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 70%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else if(game_array[count] === "blue"){
-    colour.style.boxShadow="0 0 0 1px blue inset, 0 0 0 2px blue inset, 0 7px 0 0 blue, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+    hsl = String(Math.floor(Math.random() * 361));
+    colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 70%)";
+    colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 70%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 70%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 70%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else if(game_array[count] === "green"){
-    colour.style.boxShadow = "0 0 0 1px green inset, 0 0 0 2px green inset, 0 7px 0 0 green, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+    hsl = String(Math.floor(Math.random() * 361));
+    colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 70%)";
+    colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 70%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 70%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 70%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else{
-    colour.style.boxShadow =" 0 0 0 1px orange inset, 0 0 0 2px orange inset, 0 7px 0 0 orange, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+    hsl = String(Math.floor(Math.random() * 361));
+    colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 70%)";
+    colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 70%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 70%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 70%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   count++;
   if (count == game_array.length){
