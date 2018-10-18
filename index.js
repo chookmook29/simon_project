@@ -1,4 +1,4 @@
-var game_array = [];
+var game_array = []; // Variables initialized, to be used in different scopes
 var level = 0;
 var current_button;
 var player_count = 0;
@@ -13,7 +13,7 @@ var blue;
 var green;
 var orange;
 
-function push_power_on(){
+function push_power_on(){ // Function that switches screen on and activates Start and Hard buttons
      var audio = new Audio();
 	   audio.src = "sounds/button_2.wav";
 	   audio.preload = 'auto';
@@ -25,7 +25,7 @@ function push_power_on(){
      document.getElementById("power").onclick = function(){push_power_off()};
    }
 
-function push_power_off(){
+function push_power_off(){ // Deactivates screen and Start, Hard buttons
       var audio = new Audio();
    	  audio.src = "sounds/button_2.wav";
    	  audio.preload = 'auto';
@@ -39,7 +39,7 @@ function push_power_off(){
       document.getElementById("power").onclick = function(){push_power_on()};
   }
 
-function push_hard(){
+function push_hard(){ // Hard mode initial function
       audio = new Audio();
       audio.src = "sounds/button_2.wav";
       audio.preload = 'auto';
@@ -60,7 +60,7 @@ function push_hard(){
   		var1 =  setTimeout(add_array_hard,1000);
    }
 
-function push_start(){
+function push_start(){ // Normal mode initial function
 		audio = new Audio();
 		audio.src = "sounds/button_2.wav";
 		audio.preload = 'auto';
@@ -88,14 +88,14 @@ function push_start(){
     game_array = [];
 		var1 =  setTimeout(add_array_element,1000);
 	}
-function push_empty(){
+function push_empty(){ // Used for Start, Hard buttons after power switches off
   		audio = new Audio();
   		audio.src = "sounds/button_2.wav";
   		audio.preload = 'auto';
   		audio.play();
   	}
 
-function display_array() {
+function display_array() { // Modifies colour of DOM elements based on random array from "add_array_element()", at interval, loops and stops after last element is displayed
   audio = new Audio();
   audio.src = "sounds/button_3.wav";
   audio.preload = 'auto';
@@ -127,7 +127,7 @@ function display_array() {
     clearInterval(array_visible);
   }
 }
-function display_array_hard() {
+function display_array_hard() { // Same as "display_array", but elements taken from "add_array_hard", random colours every instance
   audio = new Audio();
   audio.src = "sounds/button_3.wav";
   audio.preload = 'auto';
@@ -162,12 +162,12 @@ function display_array_hard() {
     clearInterval(array_visible);
   }
 }
-function set_background(color) {
+function set_background(color) { // Used in "display_clear()" function, default colour and shadow declaration
   var element = document.getElementById(color);
   element.style.backgroundColor = "gray";
   element.style.boxShadow = "0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 }
-function display_clear(){
+function display_clear(){ // Changes DOM elements colour to default gray
   colors.forEach(color => {
   set_background(color);
   });
@@ -177,7 +177,7 @@ function display_clear(){
 }
 
 
-function push_first(){
+function push_first(){ // Checks if player's button is from the same column as array element
 	current_button = "red";
   var audio = new Audio();
   audio.src = "sounds/button_1.wav";
@@ -280,7 +280,7 @@ function push_fourth(){
 		add_array_element();
   }
 }
-function first_hard(){
+function first_hard(){  // Checks if player's button is from the same column as array element in hard mode
 	current_button = "red";
   var audio = new Audio();
   audio.src = "sounds/button_1.wav";
@@ -384,8 +384,8 @@ function fourth_hard(){
 		add_array_hard();
   }
 }
-function add_array_element(){
-  document.getElementById("first").onclick = function(){push_empty()};
+function add_array_element(){ // Adds array element and sends to "display_array()" and "display_clear()"
+  document.getElementById("first").onclick = function(){push_empty()}; //
   document.getElementById("second").onclick = function(){push_empty()};
   document.getElementById("third").onclick = function(){push_empty()};
   document.getElementById("fourth").onclick = function(){push_empty()};
@@ -417,26 +417,26 @@ function add_array_element(){
       break;
 	}
 }
-function add_array_hard(){
+function add_array_hard(){ // Adds array element and sends to "display_array_hard()" and "display_clear()", starts with empty array every new level
   document.getElementById("first").onclick = function(){push_empty()};
   document.getElementById("second").onclick = function(){push_empty()};
   document.getElementById("third").onclick = function(){push_empty()};
   document.getElementById("fourth").onclick = function(){push_empty()};
-  for (x = 0; x<= level;x++){
-  result = Math.floor(Math.random() * 4) + 1;
-	if(result === 1){
-      game_array.push("red");
-      count = 0;}
-  else if(result === 2){
-      game_array.push("blue");
-      count = 0;}
-  else if(result === 3){
-      game_array.push("green");
-      count = 0;}
-  else {
-      game_array.push("orange");
-      count = 0;}
-	   }
-   array_visible = setInterval(display_array_hard,first_interval);
-   array_hidden = setInterval(display_clear,second_interval);
+  for (x = 0; x<= level; x++){
+    result = Math.floor(Math.random() * 4) + 1;
+  	if(result === 1){
+        game_array.push("red");
+        count = 0;}
+    else if(result === 2){
+        game_array.push("blue");
+        count = 0;}
+    else if(result === 3){
+        game_array.push("green");
+        count = 0;}
+    else {
+        game_array.push("orange");
+        count = 0;}
+  	   }
+     array_visible = setInterval(display_array_hard,first_interval);
+     array_hidden = setInterval(display_clear,second_interval);
 }
