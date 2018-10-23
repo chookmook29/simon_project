@@ -4,33 +4,45 @@ src: url("fonts/digital-7.ttf");
 
 }
 @media screen and (max-width: 575px) {
+#screen {
+	font-size: 2rem;    
+} 
 }
 @media screen and (min-width: 576px) {
-
-}
-@media screen and (min-width: 768px) {
 body {
 	width: 100%;
 }
 #screen {
+	font-size: 2rem;    
+} 
+}
+@media screen and (min-width: 768px) {
+body {
+	width: 90%;
+}
+#screen {
 	font-size: 2.5rem;    
 }    
-}
 .main-container {
 	max-width: 60%;
 }
+}
 @media screen and (min-width: 1200px) {
 body {
-	width: 80%;
+	width: 70%;
 }
 #screen {
-	font-size: 3.2rem;    
+	font-size: 2.7rem;    
+}
+.main-container {
+	max-width: 50%;
 }
 }
-body {
-    background-color: #5B5B5B;
-	background-image: url("table.jpg");
-	background-repeat: no-repeat;
+html, body {
+	background: url("table.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
 	margin: 0 auto;
 }
@@ -73,10 +85,10 @@ section  {
 	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707;
 }
 .button {
-	position: relative;
 	margin-top: 30px;
 	height: 70px;
 	margin-bottom: 30px;
+	position: relative;
 	background-color: #282828;
 	border: none;
 	box-shadow: 0 0 0 1px #161616 inset, 0 0 0 2px #2D2D2D inset, 0 7px 0 0 #333333, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
@@ -92,9 +104,8 @@ section  {
 .main-container {
 	margin-top: 10%;
 	position: relative;
-	max-width: 50%;
 }
-.col-md-offset-right-1 {
+.col-offset-right-1 {
     margin-right: 8.33333333%;
 }
 #screen{
