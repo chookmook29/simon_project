@@ -2,17 +2,43 @@
 font-family: "PIXEL";
 src: url("fonts/digital-7.ttf");
 
-}body {
+}
+@media screen and (max-width: 575px) {
+}
+@media screen and (min-width: 576px) {
+
+}
+@media screen and (min-width: 768px) {
+body {
+	width: 100%;
+}
+#screen {
+	font-size: 2.5rem;    
+}    
+}
+.main-container {
+	max-width: 60%;
+}
+@media screen and (min-width: 1200px) {
+body {
+	width: 80%;
+}
+#screen {
+	font-size: 3.2rem;    
+}
+}
+body {
     background-color: #5B5B5B;
 	background-image: url("table.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin: 0 auto;
 }
 main {
 	background-color: #282828;
+	box-shadow: 0px 9px 2px 9px #020202;
 }  
 #screen {
-	font-size: 4rem;
 	background-color: #000020;
 }    
 .hard, .power, .start {
@@ -30,31 +56,18 @@ main {
 .hard:focus, .power:focus, .start:focus {
 	outline: 0;
 }
-.console2 {
-	z-index: 1;
-	background-color: #282828;
-	font-style: italic;
-	text-shadow: 3px 0px 2px #000000;
-
-}
 .level {
 	margin-top: 30px;
 	background-color: #282828;
 	color: black;/*#00FE00*/
 	font-family: 'PIXEL';
 }
-.console4 {
-	z-index: -1;
-	background-color: #282828;
-	height: 30px;
-}
 section  {
 	color: white;
 }
 .red, .blue, .green, .orange {
 	margin-top: 30px;
-	margin-bottom: 10px;
-	border-radius: 30px;
+	border-radius: 5px;
 	height: 60px;
 	background-color: gray;
 	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707;
@@ -75,9 +88,6 @@ section  {
 }
 .button:focus {
 	outline: 0;
-}
-main {
-	box-shadow: 0px 9px 2px 9px #020202;
 }
 .main-container {
 	margin-top: 10%;
