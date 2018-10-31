@@ -8,11 +8,11 @@ const first_interval = 1000;
 const second_interval = 1080;
 var array_visible;
 var array_hidden;
-var colors = ["red", "blue", "green", "orange"];
-var red;
-var blue;
-var green;
-var orange;
+var colors = ["lightFirst", "lightSecond", "lightThird", "lightFourth"];
+var lightFirst;
+var lightSecond;
+var lightThird;
+var lightFourth;
 
 function push_power_on(){ // Function that switches screen on and activates Start and Hard buttons
      var audio = new Audio();
@@ -68,14 +68,14 @@ function push_start(){ // Normal mode initial function
 		audio.play();
     count = 0;
     level = 0;
-    var hsl_red = String(Math.floor(Math.random() * 361));
-    red = "hsl(" + hsl_red + ", 60%, 50%)";
-    var hsl_blue = String(Math.floor(Math.random() * 361));
-    blue = "hsl(" + hsl_blue + ", 60%, 50%)";
-    var hsl_green = String(Math.floor(Math.random() * 361));
-    green = "hsl(" + hsl_green + ", 60%, 50%)";
-    var hsl_orange = String(Math.floor(Math.random() * 361));
-    orange = "hsl(" + hsl_orange + ", 60%, 50%)";
+    var hsl_lightFirst = String(Math.floor(Math.random() * 361));
+    lightFirst = "hsl(" + hsl_lightFirst + ", 60%, 50%)";
+    var hsl_lightSecond = String(Math.floor(Math.random() * 361));
+    lightSecond = "hsl(" + hsl_lightSecond + ", 60%, 50%)";
+    var hsl_lightThird = String(Math.floor(Math.random() * 361));
+    lightThird = "hsl(" + hsl_lightThird + ", 60%, 50%)";
+    var hsl_lightFourth = String(Math.floor(Math.random() * 361));
+    lightFourth = "hsl(" + hsl_lightFourth + ", 60%, 50%)";
     clearInterval(array_visible);
     clearInterval(array_hidden);
     if (level.toString().length === 1){
@@ -103,21 +103,21 @@ function display_array() { // Modifies colour of DOM elements based on random ar
   audio.play();
   let colour = document.getElementById(game_array[count]);
   colour.style.backgroundColor=game_array[count];
-  if(game_array[count] === "red"){
-    colour.style.backgroundColor = red;
-    colour.style.boxShadow = "0 0 0 1px " + red + "inset, 0 0 0 2px " + red + "inset, 0 7px 0 0 " + red + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  if(game_array[count] === "lightFirst"){
+    colour.style.backgroundColor = lightFirst;
+    colour.style.boxShadow = "0 0 0 1px " + lightFirst + "inset, 0 0 0 2px " + lightFirst + "inset, 0 7px 0 0 " + lightFirst + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
-  else if(game_array[count] === "blue"){
-    colour.style.backgroundColor = blue;
-    colour.style.boxShadow = "0 0 0 1px " + blue + "inset, 0 0 0 2px " + blue + "inset, 0 7px 0 0 " + blue + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  else if(game_array[count] === "lightSecond"){
+    colour.style.backgroundColor = lightSecond;
+    colour.style.boxShadow = "0 0 0 1px " + lightSecond + "inset, 0 0 0 2px " + lightSecond + "inset, 0 7px 0 0 " + lightSecond + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
-  else if(game_array[count] === "green"){
-    colour.style.backgroundColor = green;
-    colour.style.boxShadow = "0 0 0 1px " + green + "inset, 0 0 0 2px " + green + "inset, 0 7px 0 0 " + green + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+  else if(game_array[count] === "lightThird"){
+    colour.style.backgroundColor = lightThird;
+    colour.style.boxShadow = "0 0 0 1px " + lightThird + "inset, 0 0 0 2px " + lightThird + "inset, 0 7px 0 0 " + lightThird + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else{
-    colour.style.backgroundColor = orange;
-    colour.style.boxShadow = "0 0 0 1px " + orange + "inset, 0 0 0 2px " + orange + "inset, 0 7px 0 0 " + orange + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+    colour.style.backgroundColor = lightFourth;
+    colour.style.boxShadow = "0 0 0 1px " + lightFourth + "inset, 0 0 0 2px " + lightFourth + "inset, 0 7px 0 0 " + lightFourth + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   count++;
   if (count == game_array.length){
@@ -134,17 +134,17 @@ function display_array_hard() { // Same as "display_array", but elements taken f
   audio.preload = 'auto';
   audio.play();
   let colour = document.getElementById(game_array[count]);
-  if(game_array[count] === "red"){
+  if(game_array[count] === "lightFirst"){
     let hsl = String(Math.floor(Math.random() * 361));
     colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
     colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
-  else if(game_array[count] === "blue"){
+  else if(game_array[count] === "lightSecond"){
     let hsl = String(Math.floor(Math.random() * 361));
     colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
     colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
-  else if(game_array[count] === "green"){
+  else if(game_array[count] === "lightThird"){
     let hsl = String(Math.floor(Math.random() * 361));
     colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
     colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
@@ -179,7 +179,7 @@ function display_clear(){ // Changes DOM elements colour to default gray
 
 
 function push_first(){ // Checks if player's button is from the same column as array element
-	current_button = "red";
+	current_button = "lightFirst";
   var audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
@@ -205,7 +205,7 @@ function push_first(){ // Checks if player's button is from the same column as a
 }
 
 function push_second(){
-	current_button = "blue";
+	current_button = "lightSecond";
   var audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
@@ -231,7 +231,7 @@ function push_second(){
 }
 
 function push_third(){
-	current_button = "green";
+	current_button = "lightThird";
   var audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
@@ -257,7 +257,7 @@ function push_third(){
 }
 
 function push_fourth(){
-	current_button = "orange";
+	current_button = "lightFourth";
   var audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
@@ -282,7 +282,7 @@ function push_fourth(){
   }
 }
 function first_hard(){  // Checks if player's button is from the same column as array element in hard mode
-	current_button = "red";
+	current_button = "lightFirst";
   var audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
@@ -308,7 +308,7 @@ function first_hard(){  // Checks if player's button is from the same column as 
   }
 }
 function second_hard(){
-	current_button = "blue";
+	current_button = "lightSecond";
   var audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
@@ -334,7 +334,7 @@ function second_hard(){
   }
 }
 function third_hard(){
-	current_button = "green";
+	current_button = "lightThird";
   var audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
@@ -360,7 +360,7 @@ function third_hard(){
   }
 }
 function fourth_hard(){
-	current_button = "orange";
+	current_button = "lightFourth";
   var audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
@@ -393,25 +393,25 @@ function add_array_element(){ // Adds array element and sends to "display_array(
 	let result = Math.floor(Math.random() * 4) + 1;
 	switch(result){
     case 1:
-      game_array.push("red");
+      game_array.push("lightFirst");
       count = 0;
       array_visible = setInterval(display_array,first_interval);
       array_hidden = setInterval(display_clear,second_interval);
     	break;
   	case 2:
-      game_array.push("blue");
+      game_array.push("lightSecond");
       count = 0;
       array_visible = setInterval(display_array,first_interval);
       array_hidden = setInterval(display_clear,second_interval);
       break;
   	case 3:
-      game_array.push("green");
+      game_array.push("lightThird");
       count = 0;
       array_visible = setInterval(display_array,first_interval);
       array_hidden = setInterval(display_clear,second_interval);
       break;
   	case 4:
-      game_array.push("orange");
+      game_array.push("lightFourth");
       count = 0;
       array_visible = setInterval(display_array,first_interval);
       array_hidden = setInterval(display_clear,second_interval);
@@ -426,16 +426,16 @@ function add_array_hard(){ // Adds array element and sends to "display_array_har
   for (let x = 0; x<= level; x++){
     let result = Math.floor(Math.random() * 4) + 1;
   	if(result === 1){
-        game_array.push("red");
+        game_array.push("lightFirst");
         count = 0;}
     else if(result === 2){
-        game_array.push("blue");
+        game_array.push("lightSecond");
         count = 0;}
     else if(result === 3){
-        game_array.push("green");
+        game_array.push("lightThird");
         count = 0;}
     else {
-        game_array.push("orange");
+        game_array.push("lightFourth");
         count = 0;}
   	   }
      array_visible = setInterval(display_array_hard,first_interval);
