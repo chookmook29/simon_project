@@ -19,9 +19,9 @@
           <div class="col-4">HARD</div><!--Hard mode button label-->
         </section>
         <section class="row justify-content-center">
-          <button class="col-2 offset-1 col-offset-right-1 power" id="power" onclick="push_power_on()"></button><!--Power button & event handler-->
-          <button class="col-2 offset-1 col-offset-right-1 start" id="start" onclick="push_empty()"></button><!--Start button & event handler-->
-          <button class="col-2 offset-1 col-offset-right-1 hard" id="hard" onclick="push_empty()"></button><!--Hard mode button & event handler-->
+          <button class="col-2 offset-1 col-offset-right-1 power" id="power" onclick="powerOn()"></button><!--Power button & event handler-->
+          <button class="col-2 offset-1 col-offset-right-1 start" id="start" onclick="pushEmpty()"></button><!--Start button & event handler-->
+          <button class="col-2 offset-1 col-offset-right-1 hard" id="hard" onclick="pushEmpty()"></button><!--Hard mode button & event handler-->
         </section>
         <section id="screen_panel" class="row justify-content-center level">
           <div id="screen" class="col-3">8888</div><!--Display with initial value-->
@@ -33,10 +33,10 @@
           <div id="lightFourth" class="col-1 offset-1 col-offset-right-1 lightFourth"></div><!--Fourth colour light box-->
         </section>
         <section class="row">
-          <button id="first" class="col-1 offset-1 col-offset-right-1 button" onclick="push_first()"></button><!--Player's first input button (lightFirst equivalent)-->
-          <button id="second" class="col-1 offset-1 col-offset-right-1 button" onclick="push_second()"></button><!--Player's second input button (lightSecond equivalent)-->
-          <button id="third" class="col-1 offset-1 col-offset-right-1 button" onclick="push_third()"></button><!--Player's third input button (lightThird equivalent)-->
-          <button id="fourth" class="col-1 offset-1 col-offset-right-1 button" onclick="push_fourth()"></button><!--Player's fourth input button (lightFourth equivalent)-->
+          <button id="first" class="col-1 offset-1 col-offset-right-1 button" onclick="pushFirst()"></button><!--Player's first input button (lightFirst equivalent)-->
+          <button id="second" class="col-1 offset-1 col-offset-right-1 button" onclick="pushSecond()"></button><!--Player's second input button (lightSecond equivalent)-->
+          <button id="third" class="col-1 offset-1 col-offset-right-1 button" onclick="pushThird()"></button><!--Player's third input button (lightThird equivalent)-->
+          <button id="fourth" class="col-1 offset-1 col-offset-right-1 button" onclick="pushFourth()"></button><!--Player's fourth input button (lightFourth equivalent)-->
         </section>
   		</main>
     </body>
