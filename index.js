@@ -8,18 +8,18 @@ const first_interval = 1000;
 const second_interval = 1080;
 var array_visible;
 var array_hidden;
-var colors = ["lightFirst", "lightSecond", "lightThird", "lightFourth"];
+var colours = ["lightFirst", "lightSecond", "lightThird", "lightFourth"];
 var lightFirst;
 var lightSecond;
 var lightThird;
 var lightFourth;
 
 function powerOn(){ // Function that switches screen on and activates Start and Hard buttons
-     var audio = new Audio();
+     let audio = new Audio();
 	   audio.src = "sounds/button_2.wav";
 	   audio.preload = 'auto';
      audio.play();
-     document.getElementById("screen").innerHTML = "0000"
+     document.getElementById("screen").innerHTML = "0000";
      document.getElementById("start").onclick = function(){pushStart()};
      document.getElementById("hard").onclick = function(){pushHard()};
      document.getElementById("screen").setAttribute('style', "color: #00FE00");
@@ -27,7 +27,7 @@ function powerOn(){ // Function that switches screen on and activates Start and 
    }
 
 function powerOff(){ // Deactivates screen and Start, Hard buttons
-      var audio = new Audio();
+      let audio = new Audio();
    	  audio.src = "sounds/button_2.wav";
    	  audio.preload = 'auto';
       audio.play();
@@ -36,7 +36,7 @@ function powerOff(){ // Deactivates screen and Start, Hard buttons
       document.getElementById("start").onclick = function(){pushEmpty()};
       document.getElementById("hard").onclick = function(){pushEmpty()};
       document.getElementById("screen").setAttribute('style', "color: black");
-      document.getElementById("screen").innerHTML = "8888"
+      document.getElementById("screen").innerHTML = "8888";
       document.getElementById("power").onclick = function(){powerOn()};
   }
 
@@ -58,7 +58,7 @@ function pushHard(){ // Hard mode initial function
       else if (level.toString().length === 4){
         document.getElementById("screen").innerHTML = level;}
       game_array = [];
-  		var1 =  setTimeout(addHard,1000);
+  		let timeout =  setTimeout(addHard,1000);
    }
 
 function pushStart(){ // Normal mode initial function
@@ -87,7 +87,7 @@ function pushStart(){ // Normal mode initial function
     else if (level.toString().length === 4){
       document.getElementById("screen").innerHTML = level;}
     game_array = [];
-		var1 =  setTimeout(addElement,1000);
+		let timeout =  setTimeout(addElement,1000);
 	}
 function pushEmpty(){ // Used for Start, Hard buttons after power switches off
   		let audio = new Audio();
@@ -169,7 +169,7 @@ function setBackground(color) { // Used in "displayClear()" function, default co
   element.style.boxShadow = "0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 }
 function displayClear(){ // Changes DOM elements colour to default gray
-  colors.forEach(color => {
+  colours.forEach(color => {
   setBackground(color);
   });
   if (count == game_array.length){
@@ -180,7 +180,7 @@ function displayClear(){ // Changes DOM elements colour to default gray
 
 function pushFirst(){ // Checks if player's button is from the same column as array element
 	current_button = "lightFirst";
-  var audio = new Audio();
+  let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
@@ -206,7 +206,7 @@ function pushFirst(){ // Checks if player's button is from the same column as ar
 
 function pushSecond(){
 	current_button = "lightSecond";
-  var audio = new Audio();
+  let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
@@ -232,7 +232,7 @@ function pushSecond(){
 
 function pushThird(){
 	current_button = "lightThird";
-  var audio = new Audio();
+  let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
@@ -258,7 +258,7 @@ function pushThird(){
 
 function pushFourth(){
 	current_button = "lightFourth";
-  var audio = new Audio();
+  let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
@@ -283,7 +283,7 @@ function pushFourth(){
 }
 function firstHard(){  // Checks if player's button is from the same column as array element in hard mode
 	current_button = "lightFirst";
-  var audio = new Audio();
+  let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
@@ -309,7 +309,7 @@ function firstHard(){  // Checks if player's button is from the same column as a
 }
 function secondHard(){
 	current_button = "lightSecond";
-  var audio = new Audio();
+  let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
@@ -335,7 +335,7 @@ function secondHard(){
 }
 function thirdHard(){
 	current_button = "lightThird";
-  var audio = new Audio();
+  let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
@@ -361,7 +361,7 @@ function thirdHard(){
 }
 function fourthHard(){
 	current_button = "lightFourth";
-  var audio = new Audio();
+  let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
