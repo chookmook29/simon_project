@@ -120,7 +120,7 @@ function displayArray() { // Modifies colour of DOM elements based on random arr
     colour.style.boxShadow = "0 0 0 1px " + lightFourth + "inset, 0 0 0 2px " + lightFourth + "inset, 0 7px 0 0 " + lightFourth + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   count++;
-  if (count == game_array.length){
+  if (count === game_array.length){
     document.getElementById("first").onclick = function(){pushFirst()};
     document.getElementById("second").onclick = function(){pushSecond()};
     document.getElementById("third").onclick = function(){pushThird()};
@@ -155,7 +155,7 @@ function arrayHard() { // Same as "displayArray", but elements taken from "addHa
     colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   count++;
-  if (count == game_array.length){
+  if (count === game_array.length){
     document.getElementById("first").onclick = function(){firstHard()};
     document.getElementById("second").onclick = function(){secondHard()};
     document.getElementById("third").onclick = function(){thirdHard()};
@@ -172,7 +172,7 @@ function displayClear(){ // Changes DOM elements colour to default gray
   colours.forEach(color => {
   setBackground(color);
   });
-  if (count == game_array.length){
+  if (count === game_array.length){
     clearInterval(array_hidden);
   }
 }
@@ -188,7 +188,7 @@ function pushFirst(){ // Checks if player's button is from the same column as ar
 		player_count++;
     game_a_length_check++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
 		level = level + 1;
     player_count = 0;
     game_a_length_check = 1;
@@ -214,7 +214,7 @@ function pushSecond(){
 		player_count++;
     game_a_length_check++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
 		level = level + 1;
     player_count = 0;
     game_a_length_check = 1;
@@ -240,7 +240,7 @@ function pushThird(){
 		player_count++;
     game_a_length_check++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
 		level = level + 1;
     player_count = 0;
     game_a_length_check = 1;
@@ -266,7 +266,7 @@ function pushFourth(){
 		player_count++;
     game_a_length_check++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
 		level = level + 1;
     player_count = 0;
     game_a_length_check = 1;
@@ -291,7 +291,7 @@ function firstHard(){  // Checks if player's button is from the same column as a
 		player_count++;
     game_a_length_check++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
 		level = level + 1;
     player_count = 0;
     game_a_length_check = 1;
@@ -317,7 +317,7 @@ function secondHard(){
 		player_count++;
     game_a_length_check++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
 		level = level + 1;
     player_count = 0;
     game_a_length_check = 1;
@@ -343,7 +343,7 @@ function thirdHard(){
 		player_count++;
     game_a_length_check++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
 		level = level + 1;
     player_count = 0;
     game_a_length_check = 1;
@@ -369,7 +369,7 @@ function fourthHard(){
 		player_count++;
     game_a_length_check++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check == game_array.length){
+  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
 		level = level + 1;
     player_count = 0;
     game_a_length_check = 1;
