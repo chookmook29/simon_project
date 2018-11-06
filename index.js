@@ -41,6 +41,7 @@ function powerOff(){ // Deactivates screen and Start, Hard buttons
   }
 
 function pushHard(){ // Hard mode initial function
+      document.getElementById("screen").innerHTML = "WATCH";
       let audio = new Audio();
       audio.src = "sounds/button_2.wav";
       audio.preload = 'auto';
@@ -49,19 +50,12 @@ function pushHard(){ // Hard mode initial function
       level = 0;
       clearInterval(array_visible);
       clearInterval(array_hidden);
-      if (level.toString().length === 1){
-        document.getElementById("screen").innerHTML = "000" + level;}
-      else if (level.toString().length === 2){
-        document.getElementById("screen").innerHTML = "00" + level;}
-      else if (level.toString().length === 3){
-        document.getElementById("screen").innerHTML = "0" + level;}
-      else if (level.toString().length === 4){
-        document.getElementById("screen").innerHTML = level;}
       game_array = [];
   		let timeout =  setTimeout(addHard,1000);
    }
 
 function pushStart(){ // Normal mode initial function
+    document.getElementById("screen").innerHTML = "WATCH";
 		let audio = new Audio();
 		audio.src = "sounds/button_2.wav";
 		audio.preload = 'auto';
@@ -78,14 +72,6 @@ function pushStart(){ // Normal mode initial function
     lightFourth = "hsl(" + hsl_lightFourth + ", 60%, 50%)";
     clearInterval(array_visible);
     clearInterval(array_hidden);
-    if (level.toString().length === 1){
-      document.getElementById("screen").innerHTML = "000" + level;}
-    else if (level.toString().length === 2){
-      document.getElementById("screen").innerHTML = "00" + level;}
-    else if (level.toString().length === 3){
-      document.getElementById("screen").innerHTML = "0" + level;}
-    else if (level.toString().length === 4){
-      document.getElementById("screen").innerHTML = level;}
     game_array = [];
 		let timeout =  setTimeout(addElement,1000);
 	}
@@ -104,23 +90,28 @@ function displayArray() { // Modifies colour of DOM elements based on random arr
   let colour = document.getElementById(game_array[count]);
   colour.style.backgroundColor=game_array[count];
   if(game_array[count] === "lightFirst"){
+    document.getElementById("screen").innerHTML = "WATCH";
     colour.style.backgroundColor = lightFirst;
     colour.style.boxShadow = "0 0 0 1px " + lightFirst + "inset, 0 0 0 2px " + lightFirst + "inset, 0 7px 0 0 " + lightFirst + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else if(game_array[count] === "lightSecond"){
+    document.getElementById("screen").innerHTML = "WATCH";
     colour.style.backgroundColor = lightSecond;
     colour.style.boxShadow = "0 0 0 1px " + lightSecond + "inset, 0 0 0 2px " + lightSecond + "inset, 0 7px 0 0 " + lightSecond + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else if(game_array[count] === "lightThird"){
+    document.getElementById("screen").innerHTML = "WATCH";
     colour.style.backgroundColor = lightThird;
     colour.style.boxShadow = "0 0 0 1px " + lightThird + "inset, 0 0 0 2px " + lightThird + "inset, 0 7px 0 0 " + lightThird + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else{
+    document.getElementById("screen").innerHTML = "WATCH";
     colour.style.backgroundColor = lightFourth;
     colour.style.boxShadow = "0 0 0 1px " + lightFourth + "inset, 0 0 0 2px " + lightFourth + "inset, 0 7px 0 0 " + lightFourth + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   count++;
   if (count === game_array.length){
+    document.getElementById("screen").innerHTML = "GO!";
     document.getElementById("first").onclick = function(){pushFirst()};
     document.getElementById("second").onclick = function(){pushSecond()};
     document.getElementById("third").onclick = function(){pushThird()};
@@ -135,27 +126,32 @@ function arrayHard() { // Same as "displayArray", but elements taken from "addHa
   audio.play();
   let colour = document.getElementById(game_array[count]);
   if(game_array[count] === "lightFirst"){
+    document.getElementById("screen").innerHTML = "WATCH";
     let hsl = String(Math.floor(Math.random() * 361));
     colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
     colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else if(game_array[count] === "lightSecond"){
+    document.getElementById("screen").innerHTML = "WATCH";
     let hsl = String(Math.floor(Math.random() * 361));
     colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
     colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else if(game_array[count] === "lightThird"){
+    document.getElementById("screen").innerHTML = "WATCH";
     let hsl = String(Math.floor(Math.random() * 361));
     colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
     colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   else{
+    document.getElementById("screen").innerHTML = "WATCH";
     let hsl = String(Math.floor(Math.random() * 361));
     colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
     colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   count++;
   if (count === game_array.length){
+    document.getElementById("screen").innerHTML = "GO!";
     document.getElementById("first").onclick = function(){firstHard()};
     document.getElementById("second").onclick = function(){secondHard()};
     document.getElementById("third").onclick = function(){thirdHard()};
