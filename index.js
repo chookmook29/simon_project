@@ -41,17 +41,17 @@ function powerOff(){ // Deactivates screen and Start, Hard buttons
   }
 
 function pushHard(){ // Hard mode initial function
-      document.getElementById("screen").innerHTML = "WATCH";
-      let audio = new Audio();
-      audio.src = "sounds/button_2.wav";
-      audio.preload = 'auto';
-      audio.play();
-      count = 0;
-      level = 0;
-      clearInterval(array_visible);
-      clearInterval(array_hidden);
-      game_array = [];
-  		let timeout =  setTimeout(addHard,1000);
+	document.getElementById("screen").innerHTML = "WATCH";
+    let audio = new Audio();
+    audio.src = "sounds/button_2.wav";
+    audio.preload = 'auto';
+    audio.play();
+    count = 0;
+    level = 0;
+    clearInterval(array_visible);
+    clearInterval(array_hidden);
+    game_array = [];
+  	var timeout =  setTimeout(addHard,1000);
    }
 
 function pushStart(){ // Normal mode initial function
@@ -73,7 +73,7 @@ function pushStart(){ // Normal mode initial function
     clearInterval(array_visible);
     clearInterval(array_hidden);
     game_array = [];
-		let timeout =  setTimeout(addElement,1000);
+	var timeout =  setTimeout(addElement,1000);
 	}
 function pushEmpty(){ // Used for Start, Hard buttons after power switches off
   		let audio = new Audio();
