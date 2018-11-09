@@ -15,72 +15,76 @@ var lightThird;
 var lightFourth;
 
 function powerOn(){ // Function that switches screen on and activates Start and Hard buttons
-     let audio = new Audio();
-	   audio.src = "sounds/button_2.wav";
-	   audio.preload = 'auto';
-     audio.play();
-     document.getElementById("screen").innerHTML = "0000";
-     document.getElementById("start").onclick = function(){pushStart()};
-     document.getElementById("hard").onclick = function(){pushHard()};
-     document.getElementById("screen").setAttribute('style', "color: #00FE00");
-     document.getElementById("power").onclick = function(){powerOff()};
-   }
+  let audio = new Audio();
+  audio.src = "sounds/button_2.wav";
+  audio.preload = 'auto';
+  audio.play();
+  document.getElementById("screen").innerHTML = "0000";
+  document.getElementById("start").onclick = function(){pushStart()};
+  document.getElementById("hard").onclick = function(){pushHard()};
+  document.getElementById("screen").setAttribute('style', "color: #00FE00");
+  document.getElementById("power").onclick = function(){powerOff()};
+  clearInterval(array_visible);
+  clearInterval(array_hidden);
+  }
 
 function powerOff(){ // Deactivates screen and Start, Hard buttons
-      let audio = new Audio();
-   	  audio.src = "sounds/button_2.wav";
-   	  audio.preload = 'auto';
-      audio.play();
-      clearInterval(array_visible);
-      clearInterval(array_hidden);
-      document.getElementById("start").onclick = function(){pushEmpty()};
-      document.getElementById("hard").onclick = function(){pushEmpty()};
-      document.getElementById("screen").setAttribute('style', "color: black");
-      document.getElementById("screen").innerHTML = "8888";
-      document.getElementById("power").onclick = function(){powerOn()};
+  let audio = new Audio();
+  audio.src = "sounds/button_2.wav";
+  audio.preload = 'auto';
+  audio.play();
+  clearInterval(array_visible);
+  clearInterval(array_hidden);
+  document.getElementById("start").onclick = function(){pushEmpty()};
+  document.getElementById("hard").onclick = function(){pushEmpty()};
+  document.getElementById("screen").setAttribute('style', "color: black");
+  document.getElementById("screen").innerHTML = "8888";
+  document.getElementById("power").onclick = function(){powerOn()};
   }
 
 function pushHard(){ // Hard mode initial function
-	document.getElementById("screen").innerHTML = "WATCH";
-    let audio = new Audio();
-    audio.src = "sounds/button_2.wav";
-    audio.preload = 'auto';
-    audio.play();
-    count = 0;
-    level = 0;
-    clearInterval(array_visible);
-    clearInterval(array_hidden);
-    game_array = [];
-  	var timeout =  setTimeout(addHard,1000);
-   }
+  document.getElementById("screen").innerHTML = "WATCH";
+  let audio = new Audio();
+  audio.src = "sounds/button_2.wav";
+  audio.preload = 'auto';
+  audio.play();
+  count = 0;
+  level = 0;
+  current_button;
+  clearInterval(array_visible);
+  clearInterval(array_hidden);
+  game_array = [];
+  var timeout =  setTimeout(addHard,1000);
+  }
 
 function pushStart(){ // Normal mode initial function
-    document.getElementById("screen").innerHTML = "WATCH";
-		let audio = new Audio();
-		audio.src = "sounds/button_2.wav";
-		audio.preload = 'auto';
-		audio.play();
-    count = 0;
-    level = 0;
-    var hsl_lightFirst = String(Math.floor(Math.random() * 361));
-    lightFirst = "hsl(" + hsl_lightFirst + ", 60%, 50%)";
-    var hsl_lightSecond = String(Math.floor(Math.random() * 361));
-    lightSecond = "hsl(" + hsl_lightSecond + ", 60%, 50%)";
-    var hsl_lightThird = String(Math.floor(Math.random() * 361));
-    lightThird = "hsl(" + hsl_lightThird + ", 60%, 50%)";
-    var hsl_lightFourth = String(Math.floor(Math.random() * 361));
-    lightFourth = "hsl(" + hsl_lightFourth + ", 60%, 50%)";
-    clearInterval(array_visible);
-    clearInterval(array_hidden);
-    game_array = [];
-	var timeout =  setTimeout(addElement,1000);
-	}
+  document.getElementById("screen").innerHTML = "WATCH";
+  let audio = new Audio();
+  audio.src = "sounds/button_2.wav";
+  audio.preload = 'auto';
+  audio.play();
+  count = 0;
+  level = 0;
+  var hsl_lightFirst = String(Math.floor(Math.random() * 361));
+  lightFirst = "hsl(" + hsl_lightFirst + ", 60%, 50%)";
+  var hsl_lightSecond = String(Math.floor(Math.random() * 361));
+  lightSecond = "hsl(" + hsl_lightSecond + ", 60%, 50%)";
+  var hsl_lightThird = String(Math.floor(Math.random() * 361));
+  lightThird = "hsl(" + hsl_lightThird + ", 60%, 50%)";
+  var hsl_lightFourth = String(Math.floor(Math.random() * 361));
+  lightFourth = "hsl(" + hsl_lightFourth + ", 60%, 50%)";
+  current_button;
+  clearInterval(array_visible);
+  clearInterval(array_hidden);
+  game_array = [];
+  var timeout =  setTimeout(addElement,1000);
+  }
 function pushEmpty(){ // Used for Start, Hard buttons after power switches off
-  		let audio = new Audio();
-  		audio.src = "sounds/button_2.wav";
-  		audio.preload = 'auto';
-  		audio.play();
-  	}
+  let audio = new Audio();
+  audio.src = "sounds/button_2.wav";
+  audio.preload = 'auto';
+  audio.play();
+  }
 
 function displayArray() { // Modifies colour of DOM elements based on random array from "addElement()", at interval, loops and stops after last element is displayed
   let audio = new Audio();
