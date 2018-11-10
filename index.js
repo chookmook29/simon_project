@@ -90,6 +90,70 @@ function pushEmpty(){ // Used for Start, Hard buttons after power switches off
 	audio.play();
 }
 
+function addElement(){ // Adds array element and sends to "displayArray()" and "displayClear()"
+  document.getElementById("start").onclick = function(){pushStart()};
+  document.getElementById("first").onclick = function(){pushEmpty()};
+  document.getElementById("second").onclick = function(){pushEmpty()};
+  document.getElementById("third").onclick = function(){pushEmpty()};
+  document.getElementById("fourth").onclick = function(){pushEmpty()};
+	let result = Math.floor(Math.random() * 4) + 1;
+	switch(result){
+		case 1:
+		gameArray.push("lightFirst");
+		count = 0;
+		arrayVisible = setInterval(displayArray,firstInterval);
+		arrayHidden = setInterval(displayClear,secondInterval);
+		break;
+	case 2:
+		gameArray.push("lightSecond");
+		count = 0;
+		arrayVisible = setInterval(displayArray,firstInterval);
+		arrayHidden = setInterval(displayClear,secondInterval);
+		break;
+	case 3:
+		gameArray.push("lightThird");
+		count = 0;
+		arrayVisible = setInterval(displayArray,firstInterval);
+		arrayHidden = setInterval(displayClear,secondInterval);
+		break;
+	case 4:
+		gameArray.push("lightFourth");
+		count = 0;
+		arrayVisible = setInterval(displayArray,firstInterval);
+		arrayHidden = setInterval(displayClear,secondInterval);
+		break;
+	}
+}
+
+function addHard(){ // Adds array element and sends to "arrayHard()" and "displayClear()", starts with empty array every new level
+	document.getElementById("hard").onclick = function(){pushHard()};
+	document.getElementById("first").onclick = function(){pushEmpty()};
+	document.getElementById("second").onclick = function(){pushEmpty()};
+	document.getElementById("third").onclick = function(){pushEmpty()};
+	document.getElementById("fourth").onclick = function(){pushEmpty()};
+	for (let x = 0; x <= level; x++){
+		let result = Math.floor(Math.random() * 4) + 1;
+		if(result === 1){
+			gameArray.push("lightFirst");
+			count = 0;
+		}
+		else if(result === 2){
+			gameArray.push("lightSecond");
+			count = 0;
+		}
+		else if(result === 3){
+			gameArray.push("lightThird");
+			count = 0;
+		}
+		else {
+			gameArray.push("lightFourth");
+			count = 0;
+		}
+	}
+	arrayVisible = setInterval(arrayHard,firstInterval);
+	arrayHidden = setInterval(displayClear,secondInterval);
+}
+
 function displayArray() { // Modifies colour of DOM elements based on random array from "addElement()", at interval, loops and stops after last element is displayed
 	let audio = new Audio();
 	audio.src = "sounds/button_3.wav";
@@ -286,68 +350,4 @@ function checkHard(){ // Checks if player's button is from the same column as ar
         document.getElementById("screen").innerHTML = level;}
 		addHard();
   }
-}
-
-function addElement(){ // Adds array element and sends to "displayArray()" and "displayClear()"
-  document.getElementById("start").onclick = function(){pushStart()};
-  document.getElementById("first").onclick = function(){pushEmpty()};
-  document.getElementById("second").onclick = function(){pushEmpty()};
-  document.getElementById("third").onclick = function(){pushEmpty()};
-  document.getElementById("fourth").onclick = function(){pushEmpty()};
-	let result = Math.floor(Math.random() * 4) + 1;
-	switch(result){
-		case 1:
-		gameArray.push("lightFirst");
-		count = 0;
-		arrayVisible = setInterval(displayArray,firstInterval);
-		arrayHidden = setInterval(displayClear,secondInterval);
-		break;
-	case 2:
-		gameArray.push("lightSecond");
-		count = 0;
-		arrayVisible = setInterval(displayArray,firstInterval);
-		arrayHidden = setInterval(displayClear,secondInterval);
-		break;
-	case 3:
-		gameArray.push("lightThird");
-		count = 0;
-		arrayVisible = setInterval(displayArray,firstInterval);
-		arrayHidden = setInterval(displayClear,secondInterval);
-		break;
-	case 4:
-		gameArray.push("lightFourth");
-		count = 0;
-		arrayVisible = setInterval(displayArray,firstInterval);
-		arrayHidden = setInterval(displayClear,secondInterval);
-		break;
-	}
-}
-
-function addHard(){ // Adds array element and sends to "arrayHard()" and "displayClear()", starts with empty array every new level
-	document.getElementById("hard").onclick = function(){pushHard()};
-	document.getElementById("first").onclick = function(){pushEmpty()};
-	document.getElementById("second").onclick = function(){pushEmpty()};
-	document.getElementById("third").onclick = function(){pushEmpty()};
-	document.getElementById("fourth").onclick = function(){pushEmpty()};
-	for (let x = 0; x <= level; x++){
-		let result = Math.floor(Math.random() * 4) + 1;
-		if(result === 1){
-			gameArray.push("lightFirst");
-			count = 0;
-		}
-		else if(result === 2){
-			gameArray.push("lightSecond");
-			count = 0;
-		}
-		else if(result === 3){
-			gameArray.push("lightThird");
-			count = 0;
-		}
-		else {
-			gameArray.push("lightFourth");
-			count = 0;
-		}
-	}
-	arrayVisible = setInterval(arrayHard,firstInterval);
-	arrayHidden = setInterval(displayClear,secondInterval);
 }
