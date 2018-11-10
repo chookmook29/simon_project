@@ -126,38 +126,23 @@ function displayArray() { // Modifies colour of DOM elements based on random arr
     clearInterval(array_visible);
   }
 }
-function arrayHard() { // Same as "displayArray", but elements taken from "addHard", random colours every instance
+function setLight(light){ //Used for "arrayHard" function
   let audio = new Audio();
   audio.src = "sounds/button_3.wav";
   audio.preload = 'auto';
   audio.play();
-  let colour = document.getElementById(game_array[count]);
-  if(game_array[count] === "lightFirst"){
-    document.getElementById("screen").innerHTML = "WATCH";
-    let hsl = String(Math.floor(Math.random() * 361));
-    colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
-    colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-  }
-  else if(game_array[count] === "lightSecond"){
-    document.getElementById("screen").innerHTML = "WATCH";
-    let hsl = String(Math.floor(Math.random() * 361));
-    colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
-    colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-  }
-  else if(game_array[count] === "lightThird"){
-    document.getElementById("screen").innerHTML = "WATCH";
-    let hsl = String(Math.floor(Math.random() * 361));
-    colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
-    colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-  }
-  else{
-    document.getElementById("screen").innerHTML = "WATCH";
-    let hsl = String(Math.floor(Math.random() * 361));
-    colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
-    colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
-  }
-  count++;
-  if (count === game_array.length){
+  var element2 = document.getElementById(game_array[count]);
+  document.getElementById("screen").innerHTML = "WATCH";
+  let hsl = String(Math.floor(Math.random() * 361));
+  element2.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
+  element2.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+}
+function arrayHard(){ // Same as "displayArray", but elements taken from "addHard", random colours every instance
+  colours.forEach(light => {
+    setLight(light);
+    });
+    count++;
+    if (count === game_array.length){
     document.getElementById("screen").innerHTML = "GO!";
     document.getElementById("first").onclick = function(){firstHard()};
     document.getElementById("second").onclick = function(){secondHard()};
