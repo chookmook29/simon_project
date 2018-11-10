@@ -13,6 +13,7 @@ var lightFirst;
 var lightSecond;
 var lightThird;
 var lightFourth;
+var timeout;
 
 function powerOn(){ // Function that switches screen on and activates Start and Hard buttons
   let audio = new Audio();
@@ -43,6 +44,7 @@ function powerOff(){ // Deactivates screen and Start, Hard buttons
   }
 
 function pushHard(){ // Hard mode initial function
+  document.getElementById("hard").onclick = function(){pushEmpty()};
   document.getElementById("screen").innerHTML = "WATCH";
   let audio = new Audio();
   audio.src = "sounds/button_2.wav";
@@ -54,10 +56,11 @@ function pushHard(){ // Hard mode initial function
   clearInterval(array_visible);
   clearInterval(array_hidden);
   game_array = [];
-  var timeout =  setTimeout(addHard,1000);
+  timeout =  setTimeout(addHard,1000);
   }
 
 function pushStart(){ // Normal mode initial function
+  document.getElementById("start").onclick = function(){pushEmpty()};
   document.getElementById("screen").innerHTML = "WATCH";
   let audio = new Audio();
   audio.src = "sounds/button_2.wav";
@@ -77,7 +80,7 @@ function pushStart(){ // Normal mode initial function
   clearInterval(array_visible);
   clearInterval(array_hidden);
   game_array = [];
-  var timeout =  setTimeout(addElement,1000);
+  timeout =  setTimeout(addElement,1000);
   }
 function pushEmpty(){ // Used for Start, Hard buttons after power switches off
   let audio = new Audio();
@@ -386,6 +389,7 @@ function fourthHard(){
   }
 }
 function addElement(){ // Adds array element and sends to "displayArray()" and "displayClear()"
+  document.getElementById("start").onclick = function(){pushStart()};
   document.getElementById("first").onclick = function(){pushEmpty()}; //
   document.getElementById("second").onclick = function(){pushEmpty()};
   document.getElementById("third").onclick = function(){pushEmpty()};
@@ -419,6 +423,7 @@ function addElement(){ // Adds array element and sends to "displayArray()" and "
 	}
 }
 function addHard(){ // Adds array element and sends to "arrayHard()" and "displayClear()", starts with empty array every new level
+  document.getElementById("hard").onclick = function(){pushHard()};
   document.getElementById("first").onclick = function(){pushEmpty()};
   document.getElementById("second").onclick = function(){pushEmpty()};
   document.getElementById("third").onclick = function(){pushEmpty()};
