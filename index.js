@@ -1,13 +1,13 @@
-var game_array = []; // Variables initialized, to be used in different scopes
+var gameArray = []; // Variables initialized, to be used in different scopes
 var level = 0;
-var current_button;
+var currentButton;
 var count = 0;
-var player_count = 0;
-var game_a_length_check = 1;
-const first_interval = 1000;
-const second_interval = 1080;
-var array_visible;
-var array_hidden;
+var playerCount = 0;
+var arrayLengthCheck = 1;
+const firstInterval = 1000;
+const secondInterval = 1080;
+var arrayVisible;
+var arrayHidden;
 var colours = ["lightFirst", "lightSecond", "lightThird", "lightFourth"];
 var lightFirst;
 var lightSecond;
@@ -25,8 +25,8 @@ function powerOn(){ // Function that switches screen on and activates Start and 
   document.getElementById("hard").onclick = function(){pushHard()};
   document.getElementById("screen").setAttribute('style', "color: #00FE00");
   document.getElementById("power").onclick = function(){powerOff()};
-  clearInterval(array_visible);
-  clearInterval(array_hidden);
+  clearInterval(arrayVisible);
+  clearInterval(arrayHidden);
   }
 
 function powerOff(){ // Deactivates screen and Start, Hard buttons
@@ -34,8 +34,8 @@ function powerOff(){ // Deactivates screen and Start, Hard buttons
   audio.src = "sounds/button_2.wav";
   audio.preload = 'auto';
   audio.play();
-  clearInterval(array_visible);
-  clearInterval(array_hidden);
+  clearInterval(arrayVisible);
+  clearInterval(arrayHidden);
   document.getElementById("start").onclick = function(){pushEmpty()};
   document.getElementById("hard").onclick = function(){pushEmpty()};
   document.getElementById("screen").setAttribute('style', "color: black");
@@ -52,10 +52,10 @@ function pushHard(){ // Hard mode initial function
   audio.play();
   count = 0;
   level = 0;
-  current_button;
-  clearInterval(array_visible);
-  clearInterval(array_hidden);
-  game_array = [];
+  currentButton;
+  clearInterval(arrayVisible);
+  clearInterval(arrayHidden);
+  gameArray = [];
   timeout =  setTimeout(addHard,1000);
   }
 
@@ -68,18 +68,18 @@ function pushStart(){ // Normal mode initial function
   audio.play();
   count = 0;
   level = 0;
-  var hsl_lightFirst = String(Math.floor(Math.random() * 361));
-  lightFirst = "hsl(" + hsl_lightFirst + ", 60%, 50%)";
-  var hsl_lightSecond = String(Math.floor(Math.random() * 361));
-  lightSecond = "hsl(" + hsl_lightSecond + ", 60%, 50%)";
-  var hsl_lightThird = String(Math.floor(Math.random() * 361));
-  lightThird = "hsl(" + hsl_lightThird + ", 60%, 50%)";
-  var hsl_lightFourth = String(Math.floor(Math.random() * 361));
-  lightFourth = "hsl(" + hsl_lightFourth + ", 60%, 50%)";
-  current_button;
-  clearInterval(array_visible);
-  clearInterval(array_hidden);
-  game_array = [];
+  var hslLightFirst = String(Math.floor(Math.random() * 361));
+  lightFirst = "hsl(" + hslLightFirst + ", 60%, 50%)";
+  var hslLightSecond = String(Math.floor(Math.random() * 361));
+  lightSecond = "hsl(" + hslLightSecond + ", 60%, 50%)";
+  var hslLightThird = String(Math.floor(Math.random() * 361));
+  lightThird = "hsl(" + hslLightThird + ", 60%, 50%)";
+  var hslLightFourth = String(Math.floor(Math.random() * 361));
+  lightFourth = "hsl(" + hslLightFourth + ", 60%, 50%)";
+  currentButton;
+  clearInterval(arrayVisible);
+  clearInterval(arrayHidden);
+  gameArray = [];
   timeout =  setTimeout(addElement,1000);
   }
 function pushEmpty(){ // Used for Start, Hard buttons after power switches off
@@ -94,19 +94,19 @@ function displayArray() { // Modifies colour of DOM elements based on random arr
   audio.src = "sounds/button_3.wav";
   audio.preload = 'auto';
   audio.play();
-  let colour = document.getElementById(game_array[count]);
-  colour.style.backgroundColor=game_array[count];
-  if(game_array[count] === "lightFirst"){
+  let colour = document.getElementById(gameArray[count]);
+  colour.style.backgroundColor = gameArray[count];
+  if(gameArray[count] === "lightFirst"){
     document.getElementById("screen").innerHTML = "WATCH";
     colour.style.backgroundColor = lightFirst;
     colour.style.boxShadow = "0 0 0 1px " + lightFirst + "inset, 0 0 0 2px " + lightFirst + "inset, 0 7px 0 0 " + lightFirst + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
-  else if(game_array[count] === "lightSecond"){
+  else if(gameArray[count] === "lightSecond"){
     document.getElementById("screen").innerHTML = "WATCH";
     colour.style.backgroundColor = lightSecond;
     colour.style.boxShadow = "0 0 0 1px " + lightSecond + "inset, 0 0 0 2px " + lightSecond + "inset, 0 7px 0 0 " + lightSecond + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
-  else if(game_array[count] === "lightThird"){
+  else if(gameArray[count] === "lightThird"){
     document.getElementById("screen").innerHTML = "WATCH";
     colour.style.backgroundColor = lightThird;
     colour.style.boxShadow = "0 0 0 1px " + lightThird + "inset, 0 0 0 2px " + lightThird + "inset, 0 7px 0 0 " + lightThird + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
@@ -117,13 +117,13 @@ function displayArray() { // Modifies colour of DOM elements based on random arr
     colour.style.boxShadow = "0 0 0 1px " + lightFourth + "inset, 0 0 0 2px " + lightFourth + "inset, 0 7px 0 0 " + lightFourth + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
   }
   count++;
-  if (count === game_array.length){
+  if (count === gameArray.length){
     document.getElementById("screen").innerHTML = "GO!";
     document.getElementById("first").onclick = function(){pushFirst()};
     document.getElementById("second").onclick = function(){pushSecond()};
     document.getElementById("third").onclick = function(){pushThird()};
     document.getElementById("fourth").onclick = function(){pushFourth()};
-    clearInterval(array_visible);
+    clearInterval(arrayVisible);
   }
 }
 function setLight(light){ //Used for "arrayHard" function
@@ -131,7 +131,7 @@ function setLight(light){ //Used for "arrayHard" function
   audio.src = "sounds/button_3.wav";
   audio.preload = 'auto';
   audio.play();
-  var element2 = document.getElementById(game_array[count]);
+  var element2 = document.getElementById(gameArray[count]);
   document.getElementById("screen").innerHTML = "WATCH";
   let hsl = String(Math.floor(Math.random() * 361));
   element2.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
@@ -142,13 +142,13 @@ function arrayHard(){ // Same as "displayArray", but elements taken from "addHar
     setLight(light);
     });
     count++;
-    if (count === game_array.length){
+    if (count === gameArray.length){
     document.getElementById("screen").innerHTML = "GO!";
     document.getElementById("first").onclick = function(){firstHard()};
     document.getElementById("second").onclick = function(){secondHard()};
     document.getElementById("third").onclick = function(){thirdHard()};
     document.getElementById("fourth").onclick = function(){fourthHard()};
-    clearInterval(array_visible);
+    clearInterval(arrayVisible);
   }
 }
 function setBackground(color) { // Used in "displayClear()" function, default colour and shadow declaration
@@ -160,26 +160,26 @@ function displayClear(){ // Changes DOM elements colour to default gray
   colours.forEach(color => {
   setBackground(color);
   });
-  if (count === game_array.length){
-    clearInterval(array_hidden);
+  if (count === gameArray.length){
+    clearInterval(arrayHidden);
   }
 }
 
 
 function pushFirst(){ // Checks if player's button is from the same column as array element
-	current_button = "lightFirst";
+	currentButton = "lightFirst";
   let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
-		player_count++;
-    game_a_length_check++;
+  if (currentButton === gameArray[playerCount] && arrayLengthCheck != gameArray.length){
+		playerCount++;
+    arrayLengthCheck++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
+  else if (currentButton === gameArray[playerCount] && arrayLengthCheck === gameArray.length){
 		level = level + 1;
-    player_count = 0;
-    game_a_length_check = 1;
+    playerCount = 0;
+    arrayLengthCheck = 1;
       if (level.toString().length === 1){
         document.getElementById("screen").innerHTML = "000" + level;}
       else if (level.toString().length === 2){
@@ -193,19 +193,19 @@ function pushFirst(){ // Checks if player's button is from the same column as ar
 }
 
 function pushSecond(){
-	current_button = "lightSecond";
+	currentButton = "lightSecond";
   let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
-		player_count++;
-    game_a_length_check++;
+  if (currentButton === gameArray[playerCount] && arrayLengthCheck != gameArray.length){
+		playerCount++;
+    arrayLengthCheck++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
+  else if (currentButton === gameArray[playerCount] && arrayLengthCheck === gameArray.length){
 		level = level + 1;
-    player_count = 0;
-    game_a_length_check = 1;
+    playerCount = 0;
+    arrayLengthCheck = 1;
     if (level.toString().length === 1){
       document.getElementById("screen").innerHTML = "000" + level;}
     else if (level.toString().length === 2){
@@ -219,19 +219,19 @@ function pushSecond(){
 }
 
 function pushThird(){
-	current_button = "lightThird";
+	currentButton = "lightThird";
   let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
-		player_count++;
-    game_a_length_check++;
+  if (currentButton === gameArray[playerCount] && arrayLengthCheck != gameArray.length){
+		playerCount++;
+    arrayLengthCheck++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
+  else if (currentButton === gameArray[playerCount] && arrayLengthCheck === gameArray.length){
 		level = level + 1;
-    player_count = 0;
-    game_a_length_check = 1;
+    playerCount = 0;
+    arrayLengthCheck = 1;
     if (level.toString().length === 1){
       document.getElementById("screen").innerHTML = "000" + level;}
     else if (level.toString().length === 2){
@@ -245,19 +245,19 @@ function pushThird(){
 }
 
 function pushFourth(){
-	current_button = "lightFourth";
+	currentButton = "lightFourth";
   let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
-		player_count++;
-    game_a_length_check++;
+  if (currentButton === gameArray[playerCount] && arrayLengthCheck != gameArray.length){
+		playerCount++;
+    arrayLengthCheck++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
+  else if (currentButton === gameArray[playerCount] && arrayLengthCheck === gameArray.length){
 		level = level + 1;
-    player_count = 0;
-    game_a_length_check = 1;
+    playerCount = 0;
+    arrayLengthCheck = 1;
     if (level.toString().length === 1){
       document.getElementById("screen").innerHTML = "000" + level;}
     else if (level.toString().length === 2){
@@ -270,20 +270,20 @@ function pushFourth(){
   }
 }
 function firstHard(){  // Checks if player's button is from the same column as array element in hard mode
-	current_button = "lightFirst";
+	currentButton = "lightFirst";
   let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
-		player_count++;
-    game_a_length_check++;
+  if (currentButton === gameArray[playerCount] && arrayLengthCheck != gameArray.length){
+		playerCount++;
+    arrayLengthCheck++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
+  else if (currentButton === gameArray[playerCount] && arrayLengthCheck === gameArray.length){
 		level = level + 1;
-    player_count = 0;
-    game_a_length_check = 1;
-    game_array = [];
+    playerCount = 0;
+    arrayLengthCheck = 1;
+    gameArray = [];
       if (level.toString().length === 1){
         document.getElementById("screen").innerHTML = "000" + level;}
       else if (level.toString().length === 2){
@@ -296,20 +296,20 @@ function firstHard(){  // Checks if player's button is from the same column as a
   }
 }
 function secondHard(){
-	current_button = "lightSecond";
+	currentButton = "lightSecond";
   let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
-		player_count++;
-    game_a_length_check++;
+  if (currentButton === gameArray[playerCount] && arrayLengthCheck != gameArray.length){
+		playerCount++;
+    arrayLengthCheck++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
+  else if (currentButton === gameArray[playerCount] && arrayLengthCheck === gameArray.length){
 		level = level + 1;
-    player_count = 0;
-    game_a_length_check = 1;
-    game_array = [];
+    playerCount = 0;
+    arrayLengthCheck = 1;
+    gameArray = [];
       if (level.toString().length === 1){
         document.getElementById("screen").innerHTML = "000" + level;}
       else if (level.toString().length === 2){
@@ -322,20 +322,20 @@ function secondHard(){
   }
 }
 function thirdHard(){
-	current_button = "lightThird";
+	currentButton = "lightThird";
   let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
-		player_count++;
-    game_a_length_check++;
+  if (currentButton === gameArray[playerCount] && arrayLengthCheck != gameArray.length){
+		playerCount++;
+    arrayLengthCheck++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
+  else if (currentButton === gameArray[playerCount] && arrayLengthCheck === gameArray.length){
 		level = level + 1;
-    player_count = 0;
-    game_a_length_check = 1;
-    game_array = [];
+    playerCount = 0;
+    arrayLengthCheck = 1;
+    gameArray = [];
       if (level.toString().length === 1){
         document.getElementById("screen").innerHTML = "000" + level;}
       else if (level.toString().length === 2){
@@ -348,20 +348,20 @@ function thirdHard(){
   }
 }
 function fourthHard(){
-	current_button = "lightFourth";
+	currentButton = "lightFourth";
   let audio = new Audio();
   audio.src = "sounds/button_1.wav";
   audio.preload = 'auto';
   audio.play();
-  if (current_button === game_array[player_count] && game_a_length_check != game_array.length){
-		player_count++;
-    game_a_length_check++;
+  if (currentButton === gameArray[playerCount] && arrayLengthCheck != gameArray.length){
+		playerCount++;
+    arrayLengthCheck++;
   }
-  else if (current_button === game_array[player_count] && game_a_length_check === game_array.length){
+  else if (currentButton === gameArray[playerCount] && arrayLengthCheck === gameArray.length){
 		level = level + 1;
-    player_count = 0;
-    game_a_length_check = 1;
-    game_array = [];
+    playerCount = 0;
+    arrayLengthCheck = 1;
+    gameArray = [];
       if (level.toString().length === 1){
         document.getElementById("screen").innerHTML = "000" + level;}
       else if (level.toString().length === 2){
@@ -382,28 +382,28 @@ function addElement(){ // Adds array element and sends to "displayArray()" and "
 	let result = Math.floor(Math.random() * 4) + 1;
 	switch(result){
     case 1:
-      game_array.push("lightFirst");
+      gameArray.push("lightFirst");
       count = 0;
-      array_visible = setInterval(displayArray,first_interval);
-      array_hidden = setInterval(displayClear,second_interval);
+      arrayVisible = setInterval(displayArray,firstInterval);
+      arrayHidden = setInterval(displayClear,secondInterval);
     	break;
   	case 2:
-      game_array.push("lightSecond");
+      gameArray.push("lightSecond");
       count = 0;
-      array_visible = setInterval(displayArray,first_interval);
-      array_hidden = setInterval(displayClear,second_interval);
+      arrayVisible = setInterval(displayArray,firstInterval);
+      arrayHidden = setInterval(displayClear,secondInterval);
       break;
   	case 3:
-      game_array.push("lightThird");
+      gameArray.push("lightThird");
       count = 0;
-      array_visible = setInterval(displayArray,first_interval);
-      array_hidden = setInterval(displayClear,second_interval);
+      arrayVisible = setInterval(displayArray,firstInterval);
+      arrayHidden = setInterval(displayClear,secondInterval);
       break;
   	case 4:
-      game_array.push("lightFourth");
+      gameArray.push("lightFourth");
       count = 0;
-      array_visible = setInterval(displayArray,first_interval);
-      array_hidden = setInterval(displayClear,second_interval);
+      arrayVisible = setInterval(displayArray,firstInterval);
+      arrayHidden = setInterval(displayClear,secondInterval);
       break;
 	}
 }
@@ -413,21 +413,21 @@ function addHard(){ // Adds array element and sends to "arrayHard()" and "displa
   document.getElementById("second").onclick = function(){pushEmpty()};
   document.getElementById("third").onclick = function(){pushEmpty()};
   document.getElementById("fourth").onclick = function(){pushEmpty()};
-  for (let x = 0; x<= level; x++){
+  for (let x = 0; x <= level; x++){
     let result = Math.floor(Math.random() * 4) + 1;
   	if(result === 1){
-        game_array.push("lightFirst");
+        gameArray.push("lightFirst");
         count = 0;}
     else if(result === 2){
-        game_array.push("lightSecond");
+        gameArray.push("lightSecond");
         count = 0;}
     else if(result === 3){
-        game_array.push("lightThird");
+        gameArray.push("lightThird");
         count = 0;}
     else {
-        game_array.push("lightFourth");
+        gameArray.push("lightFourth");
         count = 0;}
   	   }
-     array_visible = setInterval(arrayHard,first_interval);
-     array_hidden = setInterval(displayClear,second_interval);
+     arrayVisible = setInterval(arrayHard,firstInterval);
+     arrayHidden = setInterval(displayClear,secondInterval);
 }
