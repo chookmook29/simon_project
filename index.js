@@ -43,22 +43,6 @@ function powerOff(){ // Deactivates screen and Start, Hard buttons
 	document.getElementById("power").onclick = function(){powerOn()};
 }
 
-function pushHard(){ // Hard mode initial function
-	document.getElementById("hard").onclick = function(){pushEmpty()};
-	document.getElementById("screen").innerHTML = "WATCH";
-	let audio = new Audio();
-	audio.src = "sounds/button_2.wav";
-	audio.preload = 'auto';
-	audio.play();
-	count = 0;
-	level = 0;
-	currentButton;
-	clearInterval(arrayVisible);
-	clearInterval(arrayHidden);
-	gameArray = [];
-	timeout =  setTimeout(addHard,1000);
-}
-
 function pushStart(){ // Normal mode initial function
 	document.getElementById("start").onclick = function(){pushEmpty()};
 	document.getElementById("screen").innerHTML = "WATCH";
@@ -80,7 +64,25 @@ function pushStart(){ // Normal mode initial function
 	clearInterval(arrayVisible);
 	clearInterval(arrayHidden);
 	gameArray = [];
+	arrayLengthCheck = 1;
 	timeout =  setTimeout(addElement,1000);
+}
+
+function pushHard(){ // Hard mode initial function
+	document.getElementById("hard").onclick = function(){pushEmpty()};
+	document.getElementById("screen").innerHTML = "WATCH";
+	let audio = new Audio();
+	audio.src = "sounds/button_2.wav";
+	audio.preload = 'auto';
+	audio.play();
+	count = 0;
+	level = 0;
+	currentButton;
+	clearInterval(arrayVisible);
+	clearInterval(arrayHidden);
+	gameArray = [];
+	arrayLengthCheck = 1;
+	timeout =  setTimeout(addHard,1000);
 }
 
 function pushEmpty(){ // Used for Start, Hard buttons after power switches off
