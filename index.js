@@ -156,14 +156,14 @@ function addHard(){ // Adds array element and sends to "arrayHard()" and "displa
 	arrayHidden = setInterval(displayClear,secondInterval);
 }
 
-function displayArray() { // Modifies colour of DOM elements based on random array from "addElement()", at interval, loops and stops after last element is displayed
+function setLight(){ //Used for "displayArray" function
 	let audio = new Audio();
 	audio.src = "sounds/button_3.wav";
 	audio.preload = 'auto';
 	audio.play();
 	let colour = document.getElementById(gameArray[count]);
 	colour.style.backgroundColor = gameArray[count];
-		if(gameArray[count] === "lightFirst"){
+	if(gameArray[count] === "lightFirst"){
 		document.getElementById("screen").innerHTML = "WATCH";
 		colour.style.backgroundColor = lightFirst;
 		colour.style.boxShadow = "0 0 0 1px " + lightFirst + "inset, 0 0 0 2px " + lightFirst + "inset, 0 7px 0 0 " + lightFirst + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
@@ -183,6 +183,12 @@ function displayArray() { // Modifies colour of DOM elements based on random arr
 		colour.style.backgroundColor = lightFourth;
 		colour.style.boxShadow = "0 0 0 1px " + lightFourth + "inset, 0 0 0 2px " + lightFourth + "inset, 0 7px 0 0 " + lightFourth + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 	}
+}
+
+function displayArray() { //Modifies colour of DOM elements based on random array from "addElement()", at interval, loops and stops after last element is displayed
+	colours.forEach(light => {
+		setLight(light);
+	});
 	count++;
 	if (count === gameArray.length){
 		document.getElementById("screen").innerHTML = "GO!";
@@ -194,21 +200,21 @@ function displayArray() { // Modifies colour of DOM elements based on random arr
 	}
 }
 
-function setLight(light){ //Used for "arrayHard" function
+function setLightRandom(){ //Used for "arrayHard" function
 	let audio = new Audio();
 	audio.src = "sounds/button_3.wav";
 	audio.preload = 'auto';
 	audio.play();
-	var element2 = document.getElementById(gameArray[count]);
+	let colour = document.getElementById(gameArray[count]);
 	document.getElementById("screen").innerHTML = "WATCH";
 	let hsl = String(Math.floor(Math.random() * 361));
-	element2.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
-	element2.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
+	colour.style.backgroundColor = "hsl(" + hsl + ", 60%, 50%)";
+	colour.style.boxShadow = "0 0 0 1px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 0 0 2px " + "hsl(" + hsl + ", 60%, 50%)" + "inset, 0 7px 0 0 " + "hsl(" + hsl + ", 60%, 50%)" + ", 0 8px 0 1px #020202, 0 8px 8px 1px #070707";
 }
 
 function arrayHard(){ // Same as "displayArray", but elements taken from "addHard", random colours every instance
 	colours.forEach(light => {
-		setLight(light);
+		setLightRandom(light);
 	});
 	count++;
 		if (count === gameArray.length){
