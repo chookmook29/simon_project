@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title></title>
-      <meta charset = "UTF-8">
-  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-      <link rel = "stylesheet" type = "text/css" href = "style.css">
-  		<script src="index.js"></script>
+		<title>Simon</title>
+		<meta charset = "UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<link rel = "stylesheet" type = "text/css" href = "style.css">
+		<script src="index.js"></script>
     </head>
     <body>
-  		<main id="main" class="container main-container"><!-- Main frame of the board-->
-  			<section class="row justify-content-center game-title">
-          <div class "col">SIMON&reg;</div><!--Name or logo-->
-        </section>
-        <section class="row text-center">
-          <div class="col-4">POWER</div><!--Power button label-->
-          <div class="col-4">START</div><!--Start button label-->
-          <div class="col-4">HARD</div><!--Hard mode button label-->
-        </section>
-        <section class="row justify-content-center">
-          <button class="col-2 offset-1 my-offset power" id="power" onclick="powerOn()"></button><!--Power button & event handler-->
-          <button class="col-2 offset-1 my-offset start" id="start" onclick="pushEmpty()"></button><!--Start button & event handler-->
-          <button class="col-2 offset-1 my-offset hard" id="hard" onclick="pushEmpty()"></button><!--Hard mode button & event handler-->
-        </section>
-        <section id="screen_panel" class="row justify-content-center level">
-          <div id="screen" class="col-3">8888</div><!--Display with initial value-->
-        </section>
-        <section class="row">
-          <div id="lightFirst" class="my-col offset-1 my-offset lightFirst"></div><!--First colour light box-->
-          <div id="lightSecond" class="my-col offset-1 my-offset lightSecond"></div><!--Second colour light box-->
-          <div id="lightThird" class="my-col offset-1 my-offset  lightThird"></div><!--Third colour light box-->
-          <div id="lightFourth" class="my-col offset-1 my-offset lightFourth"></div><!--Fourth colour light box-->
-        </section>
-        <section class="row">
-          <button id="first" class="my-col offset-1 my-offset button" onclick="pushFirst()"></button><!--Player's first input button (lightFirst equivalent)-->
-          <button id="second" class="my-col offset-1 my-offset button" onclick="pushSecond()"></button><!--Player's second input button (lightSecond equivalent)-->
-          <button id="third" class="my-col offset-1 my-offset button" onclick="pushThird()"></button><!--Player's third input button (lightThird equivalent)-->
-          <button id="fourth" class="my-col offset-1 my-offset button" onclick="pushFourth()"></button><!--Player's fourth input button (lightFourth equivalent)-->
-        </section>
-  		</main>
+		<main id="main" class="container main-container"><!-- Main frame of the board-->
+			<div class="row justify-content-center game-title">
+					<div class="labels">SIMON&reg;</div><!--Name or logo-->
+				</div>
+			<div class="row text-center">
+				<div class="col-4 labels">POWER</div><!--Power button label-->
+				<div class="col-4 labels">START</div><!--Start button label-->
+				<div class="col-4 labels">HARD</div><!--Hard mode button label-->
+			</div>
+			<div class="row justify-content-center">
+				<button class="col-2 offset-1 my-offset power" id="power" onclick="powerOn()"></button><!--Power button & event handler-->
+				<button class="col-2 offset-1 my-offset start" id="start" onclick="pushEmpty()"></button><!--Start button & event handler-->
+				<button class="col-2 offset-1 my-offset hard" id="hard" onclick="pushEmpty()"></button><!--Hard mode button & event handler-->
+			</div>
+			<div id="screen_panel" class="row justify-content-center level">
+				<div id="screen" class="col-3">8888</div><!--Display with initial value-->
+			</div>
+			<div class="row">
+				<div id="lightFirst" class="my-col offset-1 my-offset lightFirst"></div><!--First colour light box-->
+				<div id="lightSecond" class="my-col offset-1 my-offset lightSecond"></div><!--Second colour light box-->
+				<div id="lightThird" class="my-col offset-1 my-offset  lightThird"></div><!--Third colour light box-->
+				<div id="lightFourth" class="my-col offset-1 my-offset lightFourth"></div><!--Fourth colour light box-->
+			</div>
+			<div class="row">
+				<button id="first" class="my-col offset-1 my-offset button" onclick="pushFirst()"></button><!--Player's first input button (lightFirst equivalent)-->
+				<button id="second" class="my-col offset-1 my-offset button" onclick="pushSecond()"></button><!--Player's second input button (lightSecond equivalent)-->
+				<button id="third" class="my-col offset-1 my-offset button" onclick="pushThird()"></button><!--Player's third input button (lightThird equivalent)-->
+				<button id="fourth" class="my-col offset-1 my-offset button" onclick="pushFourth()"></button><!--Player's fourth input button (lightFourth equivalent)-->
+			</div>
+		</main>
     </body>
 </html>
