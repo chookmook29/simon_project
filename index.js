@@ -45,6 +45,7 @@ function powerOff(){ // Deactivates screen and Start, Hard buttons
 
 function pushStart(){ // Normal mode initial function
 	document.getElementById("start").onclick = function(){pushEmpty()};
+	document.getElementById("hard").onclick = function(){pushEmpty()};
 	document.getElementById("screen").innerHTML = "WATCH";
 	let audio = new Audio();
 	audio.src = "sounds/button_1.wav";
@@ -69,6 +70,7 @@ function pushStart(){ // Normal mode initial function
 }
 
 function pushHard(){ // Hard mode initial function
+	document.getElementById("start").onclick = function(){pushEmpty()};
 	document.getElementById("hard").onclick = function(){pushEmpty()};
 	document.getElementById("screen").innerHTML = "WATCH";
 	let audio = new Audio();
@@ -94,6 +96,7 @@ function pushEmpty(){ // Used for Start, Hard buttons after power switches off
 
 function addElement(){ // Adds array element and sends to "displayArray()" and "displayClear()"
   document.getElementById("start").onclick = function(){pushStart()};
+  document.getElementById("hard").onclick = function(){pushHard()};
   document.getElementById("first").onclick = function(){pushEmpty()};
   document.getElementById("second").onclick = function(){pushEmpty()};
   document.getElementById("third").onclick = function(){pushEmpty()};
@@ -128,6 +131,7 @@ function addElement(){ // Adds array element and sends to "displayArray()" and "
 }
 
 function addHard(){ // Adds array element and sends to "arrayHard()" and "displayClear()", starts with empty array every new level
+	document.getElementById("start").onclick = function(){pushStart()};
 	document.getElementById("hard").onclick = function(){pushHard()};
 	document.getElementById("first").onclick = function(){pushEmpty()};
 	document.getElementById("second").onclick = function(){pushEmpty()};
