@@ -39,7 +39,6 @@ body {
 .game-title {
 	font-size: 30px;
 	padding-top: 20px;
-	padding-bottom: 20px;
 }
 .hard, .power, .start {
     height: 15px;
@@ -168,9 +167,8 @@ body {
 	width: 70%;
 }
 .game-title {
-	font-size: 20px;
+	font-size: 40px;
 	padding-top: 20px;
-	padding-bottom: 20px;
 }
 .my-col {
 	padding-left: 15px;
@@ -180,7 +178,7 @@ body {
 	font-size: 43px;
 }
 .main-container {
-	margin-top: 20%;
+	margin-top: 15%;
 }
 .hard, .power, .start {
 	height: 30px;
