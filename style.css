@@ -3,39 +3,205 @@ font-family: "PIXEL";
 src: url("fonts/digital-7.ttf");
 
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 575px) and (orientation: landscape){
 #screen {
-	font-size: 2rem;
+	font-size: 25px;
+}
+.game-title {
+	font-size: 20px;
+}
+.hard, .power, .start {
+    height: 15px;
+	padding-top: 20px;
+}
+.lightFirst, .lightSecond, .lightThird, .lightFourth {
+	height: 30px;
+	padding-right: 0;
+	padding-left: 0;
+}
+.button {
+	height: 40px;
 }
 }
-@media screen and (min-width: 576px) {
-body {
-	width: 100%;
-}
-#screen {
-	font-size: 2rem;
-}
-}
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 575px) and (orientation: portrait){
 body {
 	width: 90%;
 }
 #screen {
-	font-size: 2.5rem;
+	font-size: 20px;
 }
 .main-container {
+	margin-top: 30%;
+}
+.game-title {
+	font-size: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.hard, .power, .start {
+    height: 15px;
+	padding-top: 20px;
+}
+.lightFirst, .lightSecond, .lightThird, .lightFourth {
+	height: 30px;
+}
+.button {
+	height: 40px;
+}
+}
+@media screen and (min-width: 576px) and (orientation: landscape){
+body {
+	width: 100%;
+}
+#screen {
+	font-size: 32px;
+}
+.main-container {
+	margin-top: 3%;
+}
+.hard, .power, .start {
+    height: 30px;
+}
+.lightFirst, .lightSecond, .lightThird, .lightFourth {
+	height: 30px;
+}
+.button {
+	height: 40px;
+}
+}
+@media screen and (min-width: 576px) and (orientation: portrait){
+body {
+	width: 100%;
+}
+#screen {
+	font-size: 32px;
+}
+.main-container {
+	margin-top: 3%;
+}
+.hard, .power, .start {
+    height: 30px;
+}
+.lightFirst, .lightSecond, .lightThird, .lightFourth {
+	margin-top: 30px;
+	height: 30px;
+}
+.button {
+	margin-top: 30px;
+	height: 40px;
+}
+}
+@media screen and (min-width: 768px) and (orientation: landscape){
+body {
+	width: 80%;
+}
+#screen {
+	font-size: 40px;
+}
+.main-container {
+	margin-top: 3%;
 	max-width: 60%;
 }
+.hard, .power, .start {
+	height: 25px;
 }
-@media screen and (min-width: 1200px) {
+.lightFirst, .lightSecond, .lightThird, .lightFourth {;
+	height: 30px;
+}
+.button {
+	height: 40px;
+}
+}
+@media screen and (min-width: 768px) and (orientation: portrait){
+body {
+	width: 80%;
+}
+#screen {
+	font-size: 40px;
+}
+.main-container {
+	margin-top: 50%;
+	max-width: 80%;
+}
+.hard, .power, .start {
+	height: 35px;
+}
+.lightFirst, .lightSecond, .lightThird, .lightFourth {
+	height: 40px;
+}
+.button {
+	height: 50px;
+}
+}
+@media screen and (min-width: 1024px) and (orientation: landscape){
+body {
+	width: 80%;
+}
+#screen {
+	font-size: 40px;
+}
+.main-container {
+	margin-top: 20%;
+	max-width: 60%;
+}
+.hard, .power, .start {
+	height: 25px;
+}
+.lightFirst, .lightSecond, .lightThird, .lightFourth {;
+	height: 30px;
+}
+.button {
+	height: 40px;
+}
+}
+@media screen and (min-width: 1200px) and (orientation: landscape) {
+body {
+	width: 70%;
+}
+.game-title {
+	font-size: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.my-col {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#screen {
+	font-size: 43px;
+}
+.main-container {
+	margin-top: 20%;
+}
+.hard, .power, .start {
+	height: 30px;
+}
+.lightFirst, .lightSecond, .lightThird, .lightFourth {
+	height: 50px;
+}
+.button {
+	height: 60px;
+}
+}
+@media screen and (min-width: 1200px) and (orientation: portrait) {
 body {
 	width: 70%;
 }
 #screen {
-	font-size: 2.7rem;
+	font-size: 43px;
 }
 .main-container {
+	margin-top: 20%;
 	max-width: 50%;
+}
+.hard, .power, .start {
+	height: 30px;
+}
+.lightFirst, .lightSecond, .lightThird, .lightFourth {
+	height: 50px;
+}
+.button {
+	height: 60px;
 }
 }
 html, body {
@@ -55,7 +221,6 @@ main {
 }
 .hard, .power, .start {
     background-color: red;
-    height: 40px;
 	border: none;
 	text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
 	box-shadow: 0 0 0 1px #E22900 inset, 0 0 0 2px #EF280E inset, 0 8px 0 0 #BC2200, 0 8px 0 1px #000000, 0 8px 8px 1px #000000;
@@ -80,13 +245,11 @@ section  {
 .lightFirst, .lightSecond, .lightThird, .lightFourth {
 	margin-top: 30px;
 	border-radius: 5px;
-	height: 60px;
 	background-color: gray;
 	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707;
 }
 .button {
 	margin-top: 30px;
-	height: 70px;
 	margin-bottom: 30px;
 	position: relative;
 	background-color: #282828;
@@ -102,12 +265,16 @@ section  {
 	outline: 0;
 }
 .main-container {
-	margin-top: 10%;
 	position: relative;
 }
-.col-offset-right-1 {
+.my-offset {
     margin-right: 8.33333333%;
 }
 #screen{
 	text-align: center;
+}
+.my-col {
+	width: 100%;
+	position: relative;
+	max-width: 8.333333%;
 }
