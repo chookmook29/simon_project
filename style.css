@@ -1,14 +1,17 @@
 @font-face {
 font-family: "PIXEL";
 src: url("fonts/digital-7.ttf");
-
+}
+@font-face {
+font-family: "ATARI";
+src: url("fonts/atari.ttf");
 }
 @media screen and (max-width: 575px) and (orientation: landscape){
 #screen {
 	font-size: 25px;
 }
 .game-title {
-	font-size: 20px;
+	font-size: 30px;
 }
 .hard, .power, .start {
     height: 15px;
@@ -34,7 +37,7 @@ body {
 	margin-top: 30%;
 }
 .game-title {
-	font-size: 20px;
+	font-size: 30px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -57,7 +60,10 @@ body {
 	font-size: 32px;
 }
 .main-container {
-	margin-top: 3%;
+	margin-top: 2%;
+}
+.game-title {
+	font-size: 25px;
 }
 .hard, .power, .start {
     height: 30px;
@@ -79,6 +85,9 @@ body {
 .main-container {
 	margin-top: 3%;
 }
+.game-title {
+	font-size: 35px;
+}
 .hard, .power, .start {
     height: 30px;
 }
@@ -99,7 +108,7 @@ body {
 	font-size: 40px;
 }
 .main-container {
-	margin-top: 3%;
+	margin-top: 2%;
 	max-width: 60%;
 }
 .hard, .power, .start {
@@ -277,4 +286,7 @@ section  {
 	width: 100%;
 	position: relative;
 	max-width: 8.333333%;
+}
+.game-title {
+	font-family: 'Atari';
 }
