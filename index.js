@@ -1,6 +1,6 @@
 var gameArray = []; // Variables initialized, to be used in different scopes
 var level = 0;
-var currentButton;
+var currentButton = "";
 var count = 0;
 var playerCount = 0;
 var arrayLengthCheck = 1;
@@ -61,9 +61,10 @@ function pushStart(){ // Normal mode initial function
 	lightThird = "hsl(" + hslLightThird + ", 60%, 50%)";
 	var hslLightFourth = String(Math.floor(Math.random() * 361));
 	lightFourth = "hsl(" + hslLightFourth + ", 60%, 50%)";
-	currentButton;
+	currentButton = "";
 	clearInterval(arrayVisible);
 	clearInterval(arrayHidden);
+	playerCount = 0;
 	gameArray = [];
 	arrayLengthCheck = 1;
 	timeout =  setTimeout(addElement,1000);
@@ -79,9 +80,10 @@ function pushHard(){ // Hard mode initial function
 	audio.play();
 	count = 0;
 	level = 0;
-	currentButton;
+	currentButton = "";
 	clearInterval(arrayVisible);
 	clearInterval(arrayHidden);
+	playerCount = 0;
 	gameArray = [];
 	arrayLengthCheck = 1;
 	timeout =  setTimeout(addHard,1000);
@@ -95,12 +97,12 @@ function pushEmpty(){ // Used for Start, Hard buttons after power switches off
 }
 
 function addElement(){ // Adds array element and sends to "displayArray()" and "displayClear()"
-  document.getElementById("start").onclick = function(){pushStart()};
-  document.getElementById("hard").onclick = function(){pushHard()};
-  document.getElementById("first").onclick = function(){pushEmpty()};
-  document.getElementById("second").onclick = function(){pushEmpty()};
-  document.getElementById("third").onclick = function(){pushEmpty()};
-  document.getElementById("fourth").onclick = function(){pushEmpty()};
+	document.getElementById("start").onclick = function(){pushStart()};
+	document.getElementById("hard").onclick = function(){pushHard()};
+	document.getElementById("first").onclick = function(){pushEmpty()};
+	document.getElementById("second").onclick = function(){pushEmpty()};
+	document.getElementById("third").onclick = function(){pushEmpty()};
+	document.getElementById("fourth").onclick = function(){pushEmpty()};
 	let result = Math.floor(Math.random() * 4) + 1;
 	switch(result){
 		case 1:
