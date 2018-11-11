@@ -17,7 +17,7 @@ var timeout;
 
 function powerOn(){ // Function that switches screen on and activates Start and Hard buttons
 	let audio = new Audio();
-	audio.src = "sounds/button_2.wav";
+	audio.src = "sounds/button_1.wav";
 	audio.preload = 'auto';
 	audio.play();
 	document.getElementById("screen").innerHTML = "0000";
@@ -31,7 +31,7 @@ function powerOn(){ // Function that switches screen on and activates Start and 
 
 function powerOff(){ // Deactivates screen and Start, Hard buttons
 	let audio = new Audio();
-	audio.src = "sounds/button_2.wav";
+	audio.src = "sounds/button_1.wav";
 	audio.preload = 'auto';
 	audio.play();
 	clearInterval(arrayVisible);
@@ -47,7 +47,7 @@ function pushStart(){ // Normal mode initial function
 	document.getElementById("start").onclick = function(){pushEmpty()};
 	document.getElementById("screen").innerHTML = "WATCH";
 	let audio = new Audio();
-	audio.src = "sounds/button_2.wav";
+	audio.src = "sounds/button_1.wav";
 	audio.preload = 'auto';
 	audio.play();
 	count = 0;
@@ -72,7 +72,7 @@ function pushHard(){ // Hard mode initial function
 	document.getElementById("hard").onclick = function(){pushEmpty()};
 	document.getElementById("screen").innerHTML = "WATCH";
 	let audio = new Audio();
-	audio.src = "sounds/button_2.wav";
+	audio.src = "sounds/button_1.wav";
 	audio.preload = 'auto';
 	audio.play();
 	count = 0;
@@ -87,7 +87,7 @@ function pushHard(){ // Hard mode initial function
 
 function pushEmpty(){ // Used for Start, Hard buttons after power switches off
 	let audio = new Audio();
-	audio.src = "sounds/button_2.wav";
+	audio.src = "sounds/button_1.wav";
 	audio.preload = 'auto';
 	audio.play();
 }
