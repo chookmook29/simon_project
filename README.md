@@ -83,6 +83,7 @@
 	- Mozilla Firefox
 - Size has been adapted to different devices, in both orientations
 - Mobile first approach has been used
+- Functions were refactored to prevent player from looping and freezing the game by clicking on different buttons at the same time
 - Bugs
 	- jhint incorrectly detects missing semicolons when passing {script} with onclick event handler in js
 	- One of the variables still have "undefined" value in certain scopes, even when explicitly declared as a string or number
