@@ -227,6 +227,7 @@ main {
 	background-color: #000020;
 }
 .hard, .power, .start {
+	border-radius: 5px;
     background-color: red;
 	border: none;
 	text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
@@ -256,6 +257,7 @@ main {
 	box-shadow: 0 0 0 1px #8E8E8E inset, 0 0 0 2px #777777 inset, 0 7px 0 0 #727272, 0 8px 0 1px #020202, 0 8px 8px 1px #070707;
 }
 .button {
+	border-radius: 5px;
 	margin-top: 30px;
 	margin-bottom: 30px;
 	position: relative;
