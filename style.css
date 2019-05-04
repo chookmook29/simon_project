@@ -220,8 +220,8 @@ html, body {
 	margin: 0 auto;
 }
 main {
-	background-color: #282828;
-	box-shadow: 0px 9px 2px 9px #020202;
+	background-color: #525252;
+	box-shadow: 0px 9px 2px 9px #252525;
 }
 #screen {
 	background-color: #000020;
@@ -242,7 +242,7 @@ main {
 }
 .level {
 	margin-top: 30px;
-	background-color: #282828;
+	background-color: #525252;
 	color: black;/*#00FE00*/
 	font-family: 'PIXEL';
 }
@@ -259,7 +259,7 @@ main {
 	margin-top: 30px;
 	margin-bottom: 30px;
 	position: relative;
-	background-color: #282828;
+	background-color: #525252;
 	border: none;
 	box-shadow: 0 0 0 1px #161616 inset, 0 0 0 2px #2D2D2D inset, 0 7px 0 0 #333333, 0 8px 0 1px #000000, 0 8px 8px 1px #020202;
 }
@@ -273,6 +273,7 @@ main {
 }
 .main-container {
 	position: relative;
+	border-radius: 5px;
 }
 .my-offset {
     margin-right: 8.33333333%;
