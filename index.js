@@ -38,6 +38,10 @@ function powerOff(){ // Deactivates screen and Start, Hard buttons
 	clearInterval(arrayHidden);
 	document.getElementById("start").onclick = function(){pushEmpty()};
 	document.getElementById("hard").onclick = function(){pushEmpty()};
+	document.getElementById("first").onclick = function(){pushEmpty()};
+	document.getElementById("second").onclick = function(){pushEmpty()};
+	document.getElementById("third").onclick = function(){pushEmpty()};
+	document.getElementById("fourth").onclick = function(){pushEmpty()};
 	document.getElementById("screen").setAttribute('style', "color: black");
 	document.getElementById("screen").innerHTML = "8888";
 	document.getElementById("power").onclick = function(){powerOn()};
@@ -46,6 +50,7 @@ function powerOff(){ // Deactivates screen and Start, Hard buttons
 function pushStart(){ // Normal mode initial function
 	document.getElementById("start").onclick = function(){pushEmpty()};
 	document.getElementById("hard").onclick = function(){pushEmpty()};
+	document.getElementById("power").onclick = function(){pushEmpty()};
 	document.getElementById("screen").innerHTML = "WATCH";
 	let audio = new Audio();
 	audio.src = "sounds/button_1.wav";
@@ -73,6 +78,7 @@ function pushStart(){ // Normal mode initial function
 function pushHard(){ // Hard mode initial function
 	document.getElementById("start").onclick = function(){pushEmpty()};
 	document.getElementById("hard").onclick = function(){pushEmpty()};
+	document.getElementById("power").onclick = function(){pushEmpty()};
 	document.getElementById("screen").innerHTML = "WATCH";
 	let audio = new Audio();
 	audio.src = "sounds/button_1.wav";
@@ -202,6 +208,7 @@ function displayArray() { //Modifies colour of DOM elements based on random arra
 		document.getElementById("second").onclick = function(){pushSecond()};
 		document.getElementById("third").onclick = function(){pushThird()};
 		document.getElementById("fourth").onclick = function(){pushFourth()};
+		document.getElementById("power").onclick = function(){powerOff()};
 		clearInterval(arrayVisible);
 	}
 }
@@ -229,6 +236,7 @@ function arrayHard(){ // Same as "displayArray", but elements taken from "addHar
 		document.getElementById("second").onclick = function(){secondHard()};
 		document.getElementById("third").onclick = function(){thirdHard()};
 		document.getElementById("fourth").onclick = function(){fourthHard()};
+		document.getElementById("power").onclick = function(){powerOff()};
 		clearInterval(arrayVisible);
 	}
 }
